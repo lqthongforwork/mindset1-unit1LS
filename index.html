@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1: Relationships — IELTS Listening & Speaking (Pre-IELTS 4.0–5.0)</title>
+<style>
+:root{
+  --pink:#d6006e; --pink-soft:#ffe3f1; --blue:#0090d4; --blue-soft:#e2f4fd;
+  --ink:#1f2937; --muted:#556070; --bg:#f4f6fb; --card:#ffffff; --line:#e4e8f0;
+  --green:#128a4a; --green-soft:#e2f6ec; --red:#c62828; --red-soft:#fdecec;
+  --amber:#b7791f; --amber-soft:#fdf3e0; --radius:16px; --shadow:0 6px 20px rgba(20,30,60,.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  background:var(--bg); color:var(--ink); font-size:18px; line-height:1.6;
+}
+h1,h2,h3,h4{line-height:1.25; margin:0 0 .4em;}
+p{margin:.4em 0 .8em;}
+a{color:var(--blue);}
+
+/* ---------- Header + progress ---------- */
+header.top{
+  position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid var(--line);
+  box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+.top-inner{max-width:1000px; margin:0 auto; padding:10px 18px;}
+.top-title{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+.badge{background:var(--pink); color:#fff; font-weight:700; font-size:.8rem; padding:4px 10px; border-radius:20px;}
+.top-title h1{font-size:1.15rem; margin:0;}
+.progress-wrap{margin-top:8px;}
+.progress-bar{height:10px; background:#eceff5; border-radius:20px; overflow:hidden;}
+.progress-fill{height:100%; width:0%; background:linear-gradient(90deg,var(--pink),var(--blue)); transition:width .5s ease;}
+.progress-label{font-size:.78rem; color:var(--muted); margin-top:4px;}
+
+/* ---------- Nav ---------- */
+nav.menu{max-width:1000px; margin:0 auto; padding:8px 12px; display:flex; gap:8px; flex-wrap:wrap; justify-content:center;}
+nav.menu button{
+  border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:20px;
+  padding:7px 14px; font-size:.85rem; cursor:pointer; transition:.2s; font-weight:600;
+}
+nav.menu button:hover{border-color:var(--pink); color:var(--pink);}
+nav.menu button.active{background:var(--pink); color:#fff; border-color:var(--pink);}
+
+/* ---------- Layout ---------- */
+main{max-width:1000px; margin:0 auto; padding:18px;}
+section.panel{display:none; animation:fade .4s ease;}
+section.panel.show{display:block;}
+@keyframes fade{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px; margin:0 0 20px; box-shadow:var(--shadow);}
+.card.pink{border-top:5px solid var(--pink);}
+.card.blue{border-top:5px solid var(--blue);}
+.section-head{display:flex; align-items:center; gap:12px; margin-bottom:6px;}
+.section-head .emoji{font-size:1.8rem;}
+.section-head h2{font-size:1.5rem; margin:0;}
+.eyebrow{display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:var(--pink); padding:4px 10px; border-radius:6px; margin-bottom:10px;}
+.eyebrow.blue{background:var(--blue);}
+.divider{height:1px; background:var(--line); margin:18px 0;}
+
+.grid{display:grid; gap:14px;}
+.grid.two{grid-template-columns:repeat(2,1fr);}
+.grid.three{grid-template-columns:repeat(3,1fr);}
+@media(max-width:720px){ .grid.two,.grid.three{grid-template-columns:1fr;} body{font-size:17px;} .top-title h1{font-size:1rem;} }
+
+.tile{background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px;}
+.tile.soft-pink{background:var(--pink-soft); border-color:#ffc6e2;}
+.tile.soft-blue{background:var(--blue-soft); border-color:#bfe6f8;}
+.tile h4{margin:.1em 0 .4em; font-size:1.05rem;}
+ul.clean{margin:.3em 0; padding-left:1.2em;}
+ul.clean li{margin:.25em 0;}
+
+.pill{display:inline-block; background:var(--blue-soft); color:#065a80; border-radius:20px; padding:3px 12px; font-size:.85rem; margin:3px 4px 3px 0; font-weight:600;}
+
+/* ---------- Buttons ---------- */
+button.btn{
+  border:none; border-radius:10px; padding:11px 20px; font-size:.95rem; font-weight:700;
+  cursor:pointer; transition:.2s; font-family:inherit;
+}
+.btn.primary{background:var(--pink); color:#fff;}
+.btn.primary:hover{background:#b00059;}
+.btn.blue{background:var(--blue); color:#fff;}
+.btn.blue:hover{background:#0077b0;}
+.btn.ghost{background:#fff; color:var(--ink); border:1px solid var(--line);}
+.btn.ghost:hover{border-color:var(--pink); color:var(--pink);}
+.btn.small{padding:6px 12px; font-size:.82rem;}
+.btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+
+.speak{
+  border:none; background:var(--blue-soft); color:#065a80; border-radius:50%;
+  width:34px; height:34px; cursor:pointer; font-size:1rem; vertical-align:middle;
+  transition:.2s;
+}
+.speak:hover{background:var(--blue); color:#fff;}
+.speak.wide{width:auto; border-radius:20px; padding:5px 12px; font-size:.82rem; font-weight:700;}
+
+/* ---------- Exercises ---------- */
+.q{border:1px solid var(--line); border-radius:12px; padding:16px; margin:12px 0; background:#fff;}
+.q .qtext{font-weight:600; margin-bottom:10px;}
+.q .qnum{display:inline-block; background:var(--pink); color:#fff; width:26px; height:26px; border-radius:50%; text-align:center; line-height:26px; font-size:.85rem; font-weight:700; margin-right:8px;}
+.opt{display:block; border:1px solid var(--line); border-radius:9px; padding:10px 14px; margin:6px 0; cursor:pointer; transition:.15s; background:#fff;}
+.opt:hover{border-color:var(--blue); background:var(--blue-soft);}
+.opt input{margin-right:10px;}
+.opt.correct{border-color:var(--green); background:var(--green-soft);}
+.opt.wrong{border-color:var(--red); background:var(--red-soft);}
+input.gap{border:none; border-bottom:2px solid var(--blue); background:#f7fbfe; font-size:1rem; padding:5px 8px; width:150px; font-family:inherit; border-radius:6px 6px 0 0;}
+input.gap.correct{border-color:var(--green); background:var(--green-soft);}
+input.gap.wrong{border-color:var(--red); background:var(--red-soft);}
+select.gap{font-size:1rem; padding:6px; border:1px solid var(--blue); border-radius:8px; font-family:inherit; background:#f7fbfe;}
+.feedback{margin-top:12px; padding:12px 14px; border-radius:10px; font-weight:600; display:none;}
+.feedback.show{display:block;}
+.feedback.good{background:var(--green-soft); color:var(--green);}
+.feedback.mid{background:var(--amber-soft); color:var(--amber);}
+.explain{font-size:.9rem; color:var(--muted); font-weight:500; margin-top:6px;}
+.score-chip{display:inline-block; background:var(--ink); color:#fff; border-radius:20px; padding:6px 16px; font-weight:700; margin-right:8px;}
+
+table.formtab{width:100%; border-collapse:collapse; margin:10px 0;}
+table.formtab th,table.formtab td{border:1px solid var(--line); padding:10px; text-align:left; font-size:.95rem;}
+table.formtab th{background:var(--pink-soft);}
+
+/* matching */
+.match-wrap{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+@media(max-width:600px){.match-wrap{grid-template-columns:1fr;}}
+.match-item{display:flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:9px; padding:10px; background:#fff;}
+.match-item select{flex:0 0 60px;}
+
+/* transcript */
+.transcript{background:#f7f9fc; border-left:4px solid var(--blue); padding:12px 16px; border-radius:8px; margin-top:10px; font-size:.95rem; display:none;}
+.transcript.show{display:block;}
+.line{margin:4px 0;}
+.line b{color:var(--pink);}
+
+/* timer */
+.timer-box{text-align:center; background:var(--blue-soft); border-radius:14px; padding:20px; margin:14px 0;}
+.timer-display{font-size:3rem; font-weight:800; color:var(--blue); font-variant-numeric:tabular-nums;}
+.timer-phase{font-size:1rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.08em;}
+.timer-box.prep{background:var(--amber-soft);}
+.timer-box.prep .timer-display{color:var(--amber);}
+.timer-box.speak-phase{background:var(--green-soft);}
+.timer-box.speak-phase .timer-display{color:var(--green);}
+
+/* checklist */
+.checklist label{display:flex; align-items:flex-start; gap:10px; padding:8px; border-radius:8px; cursor:pointer;}
+.checklist label:hover{background:var(--blue-soft);}
+.checklist input{margin-top:5px; transform:scale(1.2);}
+
+.model{background:var(--green-soft); border-radius:10px; padding:12px 16px; margin:10px 0; border-left:4px solid var(--green);}
+.model .lvl{font-size:.72rem; font-weight:700; color:var(--green); text-transform:uppercase; letter-spacing:.06em;}
+.hl{background:#fff2a8; padding:0 3px; border-radius:3px; font-weight:600;}
+
+.note{background:var(--amber-soft); border-left:4px solid var(--amber); border-radius:8px; padding:10px 14px; font-size:.92rem; margin:10px 0;}
+.tip{background:var(--pink-soft); border-left:4px solid var(--pink); border-radius:8px; padding:10px 14px; font-size:.92rem; margin:10px 0;}
+
+footer{text-align:center; color:var(--muted); font-size:.82rem; padding:26px 12px 50px;}
+.done-tag{color:var(--green); font-weight:700;}
+
+.reflect textarea{width:100%; border:1px solid var(--line); border-radius:10px; padding:10px; font-family:inherit; font-size:.95rem; min-height:70px; resize:vertical;}
+
+/* ---------- Vocabulary cards extra ---------- */
+.tile .pos{display:inline-block; font-size:.72rem; font-weight:700; color:#fff; background:var(--blue); padding:2px 8px; border-radius:20px; margin-left:4px; vertical-align:middle;}
+.tile .ipa{color:var(--pink); font-weight:600; font-size:.9rem;}
+.chunk-list{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px;}
+.chunk-list .pill{background:var(--pink-soft); color:#a3004f;}
+
+/* ---------- Flashcards ---------- */
+.fc-stage{max-width:460px; margin:10px auto; }
+.flashcard{perspective:1200px; width:100%; height:320px; cursor:pointer;}
+.fc-inner{position:relative; width:100%; height:100%; transition:transform .6s; transform-style:preserve-3d;}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg);}
+.fc-face{position:absolute; width:100%; height:100%; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  border-radius:18px; padding:22px; display:flex; flex-direction:column; box-shadow:var(--shadow); overflow:auto;}
+.fc-front{background:linear-gradient(135deg,#fff, #eef6fd); border:2px solid var(--blue); align-items:center; justify-content:center; text-align:center;}
+.fc-front .fc-word{font-size:1.7rem; font-weight:800; color:var(--ink); margin-bottom:6px;}
+.fc-front .fc-ipa{color:var(--pink); font-weight:600; margin-bottom:8px;}
+.fc-front .fc-pos{font-size:.75rem; font-weight:700; color:#fff; background:var(--blue); padding:3px 12px; border-radius:20px;}
+.fc-front .fc-hint{position:absolute; bottom:12px; left:0; right:0; font-size:.78rem; color:var(--muted);}
+.fc-back{background:linear-gradient(135deg,#fff,#fff0f7); border:2px solid var(--pink); transform:rotateY(180deg); text-align:left;}
+.fc-back h4{color:var(--pink); margin:0 0 4px; font-size:1.1rem;}
+.fc-back p{margin:5px 0; font-size:.95rem;}
+.fc-back .lbl{font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted);}
+.fc-controls{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:14px;}
+.fc-meta{display:flex; justify-content:space-between; align-items:center; max-width:460px; margin:0 auto 8px; font-size:.85rem; color:var(--muted); font-weight:600;}
+.fc-status{display:inline-block; padding:2px 10px; border-radius:20px; font-size:.75rem; font-weight:700;}
+.fc-status.known{background:var(--green-soft); color:var(--green);}
+.fc-status.practice{background:var(--amber-soft); color:var(--amber);}
+.fc-status.new{background:#eceff5; color:var(--muted);}
+.fc-progress{height:8px; background:#eceff5; border-radius:20px; overflow:hidden; max-width:460px; margin:6px auto 0;}
+.fc-progress > div{height:100%; width:0; background:linear-gradient(90deg,var(--pink),var(--blue)); transition:width .3s;}
+.fc-tally{text-align:center; margin-top:10px; font-size:.85rem;}
+.fc-tally b.k{color:var(--green);} .fc-tally b.p{color:var(--amber);}
+
+/* ---------- Drag & drop ---------- */
+.dd-pool{display:flex; flex-wrap:wrap; gap:8px; padding:12px; background:#f7f9fc; border:1px dashed var(--blue); border-radius:12px; min-height:54px; margin:10px 0;}
+.dd-item{background:#fff; border:1px solid var(--blue); border-radius:20px; padding:7px 14px; font-weight:600; cursor:grab; font-size:.9rem; user-select:none; touch-action:none;}
+.dd-item.dragging{opacity:.5;}
+.dd-item.placed{background:var(--blue-soft);}
+.dd-targets{display:grid; grid-template-columns:1fr; gap:8px;}
+.dd-zone{display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius:10px; padding:10px; background:#fff; min-height:52px; flex-wrap:wrap;}
+.dd-zone .prompt{flex:1; min-width:180px;}
+.dd-drop{min-width:130px; min-height:38px; border:2px dashed #cbd5e1; border-radius:20px; display:flex; align-items:center; justify-content:center; padding:4px 10px; background:#fafbfe;}
+.dd-drop.over{border-color:var(--pink); background:var(--pink-soft);}
+.dd-drop.correct{border-style:solid; border-color:var(--green); background:var(--green-soft);}
+.dd-drop.wrong{border-style:solid; border-color:var(--red); background:var(--red-soft);}
+.cat-cols{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+@media(max-width:600px){.cat-cols{grid-template-columns:1fr;}}
+.cat-box{border:1px solid var(--line); border-radius:12px; padding:10px; background:#fff;}
+.cat-box h4{text-align:center; margin:.2em 0 .5em;}
+.cat-drop{min-height:80px; background:#fafbfe; border:2px dashed #cbd5e1; border-radius:10px; padding:8px; display:flex; flex-direction:column; gap:6px;}
+.cat-drop.over{border-color:var(--pink); background:var(--pink-soft);}
+
+/* ---------- Audio player ---------- */
+.audio-box{background:var(--blue-soft); border:1px solid #bfe6f8; border-radius:12px; padding:12px 14px; margin:10px 0;}
+.audio-box .track{font-size:.8rem; font-weight:700; color:#065a80; margin-bottom:6px;}
+.audio-box audio{width:100%; height:40px;}
+.audio-missing{font-size:.8rem; color:var(--amber); margin-top:6px; display:none;}
+.numgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+@media(max-width:600px){.numgrid{grid-template-columns:1fr;}}
+.numq{border:1px solid var(--line); border-radius:10px; padding:10px; background:#fff;}
+.numq .pairbtns{display:flex; gap:8px; margin-top:6px;}
+.numq .pairbtns label{flex:1; text-align:center; border:1px solid var(--line); border-radius:8px; padding:8px; cursor:pointer;}
+.numq .pairbtns label:hover{border-color:var(--blue); background:var(--blue-soft);}
+.numq .pairbtns label.correct{border-color:var(--green); background:var(--green-soft);}
+.numq .pairbtns label.wrong{border-color:var(--red); background:var(--red-soft);}
+.numq .pairbtns input{display:none;}
+.numq .pairbtns input:checked + span{font-weight:800; color:var(--blue);}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="top-title">
+      <span class="badge">UNIT 01</span>
+      <h1>Relationships — IELTS Listening &amp; Speaking</h1>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label" id="progressLabel">Your progress: 0% — start with the Overview 👇</div>
+    </div>
+  </div>
+  <nav class="menu" id="menu">
+    <button data-tab="overview" class="active">📋 Overview</button>
+    <button data-tab="warmup">🔥 Warm-up</button>
+    <button data-tab="listening">🎧 Listening</button>
+    <button data-tab="speaking">🗣️ Speaking</button>
+    <button data-tab="vocab">📚 Vocabulary</button>
+    <button data-tab="review">🏁 Review</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="panel show" id="overview">
+  <div class="card pink">
+    <span class="eyebrow">Lesson Overview</span>
+    <div class="section-head"><span class="emoji">👨‍👩‍👧‍👦</span><h2>Unit 1: Relationships (Family)</h2></div>
+    <p>Welcome! In this lesson you will practise <b>IELTS Listening</b> and <b>IELTS Speaking</b> using the topic of <b>family and relationships</b>. Everything is designed for Pre-IELTS learners (band 4.0–5.0), so the language is kept simple and there is lots of help before each task.</p>
+
+    <div class="grid two">
+      <div class="tile soft-pink">
+        <h4>🎯 Lesson objectives</h4>
+        <p>By the end of this lesson you will be able to:</p>
+        <ul class="clean">
+          <li>identify the speakers in a conversation</li>
+          <li>listen carefully for numbers, prices and dates</li>
+          <li>answer IELTS-style multiple-choice, form-completion, matching and short-answer questions</li>
+          <li>talk about your family using useful collocations</li>
+          <li>give full answers in Speaking Part 1, 2 and 3</li>
+        </ul>
+      </div>
+      <div class="tile soft-blue">
+        <h4>🧩 Skills covered</h4>
+        <p><span class="pill">Listening</span><span class="pill">Speaking</span><span class="pill">Vocabulary</span><span class="pill">Pronunciation</span></p>
+        <h4 style="margin-top:12px;">⏱️ Estimated time</h4>
+        <p><b>About 90 minutes</b> — Warm-up (10) · Listening (30) · Speaking (30) · Vocabulary (10) · Review (10).</p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <b>📖 Instructions for students</b>
+      <ul class="clean">
+        <li>Use the menu at the top to move between sections. Try to do them in order.</li>
+        <li>Click the <b>🔊 speaker buttons</b> to hear words and sentences (turn your sound on).</li>
+        <li>Do each task, then press <b>Check answers</b> to see your score and feedback.</li>
+        <li>Use <b>Try again</b> to repeat a task as many times as you like.</li>
+        <li>Watch the <b>progress bar</b> at the top fill up as you finish each section. 🎉</li>
+      </ul>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="goTab('warmup')">Start the lesson →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WARM-UP ============ -->
+<section class="panel" id="warmup">
+  <div class="card pink">
+    <span class="eyebrow">Section 1 · Warm-up</span>
+    <div class="section-head"><span class="emoji">🔥</span><h2>Get ready to talk about family</h2></div>
+    <p>Before we listen and speak, let's warm up. Read the questions and think about your own answers. Say your answers out loud — this helps your speaking!</p>
+
+    <div class="tile soft-blue">
+      <h4>💬 Discussion questions</h4>
+      <ul class="clean">
+        <li>How many people are there in your family?
+          <button class="speak" title="Listen" onclick="speak('How many people are there in your family?')">🔊</button></li>
+        <li>Who do you spend the most time with?</li>
+        <li>What do you like doing together as a family?</li>
+        <li>Is your family big or small?</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+    <h3>🔮 Prediction activity (before listening)</h3>
+    <p>In the Listening test, you will hear people <b>booking a table at a restaurant</b> and <b>buying a gift in a shop</b>. Before you listen, predict: what words might you hear?</p>
+    <div class="q">
+      <div class="qtext">Tick the words you think you will hear in a <b>restaurant booking</b>. (There is no wrong answer — just predict!)</div>
+      <div id="predict"></div>
+      <div class="btn-row">
+        <button class="btn ghost small" onclick="revealPredict()">Show common words</button>
+      </div>
+      <div class="feedback" id="predictFb"></div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>👥 Pair-work speaking</h3>
+    <div class="tile soft-pink">
+      <p>Work with a partner (or say your answers out loud). Talk for <b>20 seconds</b> about each question:</p>
+      <ul class="clean">
+        <li>Describe one person in your family. What are they like?</li>
+        <li>What do you usually do together at the weekend?</li>
+        <li>Who are you most similar to in your family? Why?</li>
+      </ul>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="goTab('listening')">Go to Listening →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LISTENING ============ -->
+<section class="panel" id="listening">
+  <!-- intro + context -->
+  <div class="card pink">
+    <span class="eyebrow">Section 2 · IELTS Listening</span>
+    <div class="section-head"><span class="emoji">🎧</span><h2>Listening: everyday conversations</h2></div>
+    <p>In <b>Section 1</b> of the IELTS Listening test you hear <b>two people</b> talking in an everyday situation, for example booking a restaurant or shopping. One person usually needs to <b>find out information</b> from the other.</p>
+    <div class="note">🎧 <b>How this works:</b> each task has a real <b>audio player</b> from the coursebook. Press <b>▶ Play</b> on the player, listen, and answer the questions. You can replay as many times as you like, and show the transcript afterwards to check. <i>(Keep the "audio" folder in the same place as this file so the sound works.)</i></div>
+  </div>
+
+  <!-- pre-listening vocab + pronunciation -->
+  <div class="card blue">
+    <span class="eyebrow blue">Before you listen</span>
+    <h3>📖 Pre-listening vocabulary</h3>
+    <p>Learn these words first. Click 🔊 to hear the pronunciation.</p>
+    <div class="grid two" id="preVocab"></div>
+    <div class="tip"><b>Pronunciation focus — numbers that sound similar:</b> be careful with <b>-teen</b> and <b>-ty</b> numbers.
+      <div style="margin-top:8px;">
+        <button class="speak wide" onclick="speak('thirteen',0.8)">🔊 thirteen (13)</button>
+        <button class="speak wide" onclick="speak('thirty',0.8)">🔊 thirty (30)</button>
+        <button class="speak wide" onclick="speak('sixteen',0.8)">🔊 sixteen (16)</button>
+        <button class="speak wide" onclick="speak('sixty',0.8)">🔊 sixty (60)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- strategies -->
+  <div class="card">
+    <h3>🧠 Listening strategies</h3>
+    <div class="grid two">
+      <div class="tile"><h4>1. Predict answers</h4><p>Read the questions first. Guess what kind of answer you need (a number? a name? a place?).</p></div>
+      <div class="tile"><h4>2. Identify keywords</h4><p>Underline the important words in each question so you know what to listen for.</p></div>
+      <div class="tile"><h4>3. Listen for numbers, names, dates, places</h4><p>Details like <b>£318</b>, <b>the 17th</b>, or <b>20 people</b> are common answers.</p></div>
+      <div class="tile"><h4>4. Recognise paraphrasing</h4><p>The words you hear are often <b>different</b> from the question. "a leaving party" = "a goodbye party".</p></div>
+      <div class="tile"><h4>5. Avoid distractors</h4><p>You may hear several numbers, but only one is correct. Listen for words like <b>"actually"</b> or <b>"no, no"</b> that show a correction.</p></div>
+    </div>
+  </div>
+
+  <!-- TASK 1: MCQ situations + speakers (Track 02) -->
+  <div class="card blue">
+    <span class="eyebrow blue">Task 1 · Multiple choice</span>
+    <h3>🎧 Two conversations — situations &amp; speakers</h3>
+    <p><b>Instructions:</b> Listen to the recording. You will hear the start of <b>two conversations</b>. Then choose <b>one</b> answer for each question.</p>
+    <div class="audio-box">
+      <div class="track">🔊 Track 02 · Conversations 1 &amp; 2 (opening)</div>
+      <audio controls preload="none" src="audio/u1_02.mp3"></audio>
+    </div>
+    <div class="q">
+      <div class="qtext"><span class="qnum">1</span>What is <b>Conversation 1</b> about?</div>
+      <label class="opt task1-q1" data-v="A"><input type="radio" name="q1" value="A">A · Discussing a course assignment</label>
+      <label class="opt task1-q1" data-v="B"><input type="radio" name="q1" value="B">B · Arranging a birthday celebration</label>
+      <label class="opt task1-q1" data-v="C"><input type="radio" name="q1" value="C">C · Choosing a gift</label>
+    </div>
+    <div class="q">
+      <div class="qtext"><span class="qnum">2</span>What is <b>Conversation 2</b> about?</div>
+      <label class="opt task1-q2" data-v="A"><input type="radio" name="q2" value="A">A · Arranging a party</label>
+      <label class="opt task1-q2" data-v="B"><input type="radio" name="q2" value="B">B · Choosing a gift</label>
+      <label class="opt task1-q2" data-v="C"><input type="radio" name="q2" value="C">C · Booking a hotel room</label>
+    </div>
+    <div class="q">
+      <div class="qtext"><span class="qnum">3</span>In Conversation 1, the customer would like to …</div>
+      <label class="opt task1-q3" data-v="A"><input type="radio" name="q3" value="A">A · make a reservation (book a table)</label>
+      <label class="opt task1-q3" data-v="B"><input type="radio" name="q3" value="B">B · order a meal now</label>
+      <label class="opt task1-q3" data-v="C"><input type="radio" name="q3" value="C">C · cancel a booking</label>
+    </div>
+    <div class="q">
+      <div class="qtext"><span class="qnum">4</span>In Conversation 2, the customer decides to look at …</div>
+      <label class="opt task1-q4" data-v="A"><input type="radio" name="q4" value="A">A · a necklace</label>
+      <label class="opt task1-q4" data-v="B"><input type="radio" name="q4" value="B">B · a pair of earrings</label>
+      <label class="opt task1-q4" data-v="C"><input type="radio" name="q4" value="C">C · a ring</label>
+    </div>
+    <div class="q">
+      <div class="qtext"><span class="qnum">5</span>In Conversation 1, the customer is …</div>
+      <label class="opt task1-q5" data-v="A"><input type="radio" name="q5" value="A">A · male</label>
+      <label class="opt task1-q5" data-v="B"><input type="radio" name="q5" value="B">B · female (it's her husband's birthday)</label>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkT1()">Check answers</button>
+      <button class="btn ghost" onclick="resetT1()">↺ Try again</button>
+      <button class="btn ghost small" onclick="toggle('t1')">📄 Show / hide transcript</button>
+    </div>
+    <div class="feedback" id="t1fb"></div>
+    <div class="transcript" id="t1"></div>
+  </div>
+
+  <!-- TASK 2: Listening for numbers (Track 03) -->
+  <div class="card blue">
+    <span class="eyebrow blue">Task 2 · Listening for numbers</span>
+    <h3>🔢 Circle the number you hear</h3>
+    <p><b>Instructions:</b> Listen and choose the number you hear in each pair. Be careful with numbers that sound similar (like <b>17</b> and <b>70</b>)!</p>
+    <div class="audio-box">
+      <div class="track">🔊 Track 03 · Numbers a–h</div>
+      <audio controls preload="none" src="audio/u1_03.mp3"></audio>
+    </div>
+    <div class="numgrid" id="numGrid"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkNums()">Check answers</button>
+      <button class="btn ghost" onclick="resetNums()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="numfb"></div>
+  </div>
+
+  <!-- TASK 3: FORM/NOTE completion (Tracks 04 + 05) -->
+  <div class="card blue">
+    <span class="eyebrow blue">Task 3 · Form &amp; note completion</span>
+    <h3>📝 Complete the booking form</h3>
+    <p><b>Instructions:</b> Listen to the two recordings and complete the restaurant booking form. Write <b>ONE number</b> in each gap. Listen carefully for corrections and distractors!</p>
+    <div class="audio-box">
+      <div class="track">🔊 Track 04 · Number of people, date &amp; room</div>
+      <audio controls preload="none" src="audio/u1_04.mp3"></audio>
+    </div>
+    <div class="audio-box">
+      <div class="track">🔊 Track 05 · The price</div>
+      <audio controls preload="none" src="audio/u1_05.mp3"></audio>
+    </div>
+    <table class="formtab">
+      <tr><th colspan="2">🏨 WILLOWTREE HOTEL — Restaurant booking</th></tr>
+      <tr><td>Number of people</td><td><input class="gap" id="f1" placeholder="number"></td></tr>
+      <tr><td>Date (Saturday the …)</td><td><input class="gap" id="f2" placeholder="e.g. 12th"></td></tr>
+      <tr><td>The private room can seat up to</td><td><input class="gap" id="f3" placeholder="number"> people</td></tr>
+      <tr><td>Set three-course menu, per person</td><td>£<input class="gap" id="f4" placeholder="number"></td></tr>
+      <tr><td>Total cost of the booking</td><td>£<input class="gap" id="f5" placeholder="number"></td></tr>
+    </table>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkForm()">Check answers</button>
+      <button class="btn ghost" onclick="resetForm()">↺ Try again</button>
+      <button class="btn ghost small" onclick="toggle('t3form')">📄 Show / hide transcript</button>
+    </div>
+    <div class="feedback" id="formfb"></div>
+    <div class="transcript" id="t3form"></div>
+  </div>
+
+  <!-- TASK 4: Conversation 2 short answer (Track 06) -->
+  <div class="card blue">
+    <span class="eyebrow blue">Task 4 · Short-answer questions</span>
+    <h3>🎁 The gift shop — buying earrings</h3>
+    <p><b>Instructions:</b> Listen and answer. Write prices as numbers only (no £ sign) and one word where needed.</p>
+    <div class="audio-box">
+      <div class="track">🔊 Track 06 · Conversation 2 (earrings &amp; gift wrapping)</div>
+      <audio controls preload="none" src="audio/u1_06.mp3"></audio>
+    </div>
+    <div class="q"><div class="qtext"><span class="qnum">1</span>What does the customer want to buy? (one word)</div>
+      <input class="gap" id="s1" placeholder="a word" style="width:180px"></div>
+    <div class="q"><div class="qtext"><span class="qnum">2</span>How much were the earrings <b>before</b> the sale? £ …</div>
+      <input class="gap" id="s2" placeholder="number"></div>
+    <div class="q"><div class="qtext"><span class="qnum">3</span>The price of the earrings <b>now</b> is £ …</div>
+      <input class="gap" id="s3" placeholder="number"></div>
+    <div class="q"><div class="qtext"><span class="qnum">4</span>How much money does the customer save? £ …</div>
+      <input class="gap" id="s4" placeholder="number"></div>
+    <div class="q"><div class="qtext"><span class="qnum">5</span>Which wrapping does the customer choose? (one word: pretty / luxury)</div>
+      <input class="gap" id="s5" placeholder="a word" style="width:180px"></div>
+    <div class="q"><div class="qtext"><span class="qnum">6</span>How much does that gift wrapping cost? £ …</div>
+      <input class="gap" id="s6" placeholder="number"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkShort()">Check answers</button>
+      <button class="btn ghost" onclick="resetShort()">↺ Try again</button>
+      <button class="btn ghost small" onclick="toggle('t2')">📄 Show / hide transcript</button>
+    </div>
+    <div class="feedback" id="shortfb"></div>
+    <div class="transcript" id="t2"></div>
+  </div>
+
+  <!-- TASK 5: complete the conversation (Track 07) -->
+  <div class="card blue">
+    <span class="eyebrow blue">Task 5 · Complete the conversation</span>
+    <h3>✍️ Listen and fill the gaps</h3>
+    <p><b>Instructions:</b> Listen and write the missing number (a price) in each gap.</p>
+    <div class="audio-box">
+      <div class="track">🔊 Track 07 · "How much are they?"</div>
+      <audio controls preload="none" src="audio/u1_07.mp3"></audio>
+    </div>
+    <div class="tile soft-blue" style="line-height:2.2">
+      <b>Customer:</b> Oh, really? So, how much are they?<br>
+      <b>Assistant:</b> Well, they <i>were</i> <input class="gap" id="g1" placeholder="?" style="width:70px"> pounds, but actually we've got a sale on at the moment, so they're a little cheaper — only <input class="gap" id="g2" placeholder="?" style="width:70px"> pounds. So you can save <input class="gap" id="g3" placeholder="?" style="width:70px"> pounds!
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkGaps07()">Check answers</button>
+      <button class="btn ghost" onclick="resetGaps07()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="g07fb"></div>
+  </div>
+
+  <!-- TASK 6: Matching -->
+  <div class="card blue">
+    <span class="eyebrow blue">Task 6 · Matching (paraphrasing)</span>
+    <h3>🔗 Match the words with a similar meaning</h3>
+    <p><b>Instructions:</b> In IELTS the words you hear are often different from the question. Choose the letter (a–e) that matches each word (1–5).</p>
+    <div class="match-wrap" id="matchGrid"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkMatch()">Check answers</button>
+      <button class="btn ghost" onclick="resetMatch()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="matchfb"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="goTab('speaking')">Go to Speaking →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKING ============ -->
+<section class="panel" id="speaking">
+  <div class="card blue">
+    <span class="eyebrow blue">Section 3 · IELTS Speaking</span>
+    <div class="section-head"><span class="emoji">🗣️</span><h2>Speaking about family</h2></div>
+    <p>The Speaking test has <b>three parts</b>. Today you will practise all three on the topic of <b>family and relationships</b>. Remember the golden rule for Part 1: <b>give full answers (2–3 sentences) but don't talk too long.</b></p>
+    <div class="tip">💡 <b>How to extend an answer:</b> add a reason or detail with these words:
+      <b>because</b>, <b>and</b>, <b>but</b>, <b>so</b>, <b>also</b>, <b>although / even though</b>.<br>
+      <i>Example:</i> "I have one older brother, <b>and</b> we're very close <b>because</b> we like the same games."
+    </div>
+  </div>
+
+  <!-- useful language -->
+  <div class="card">
+    <h3>🧰 Useful vocabulary &amp; sentence starters</h3>
+    <div class="grid two">
+      <div class="tile soft-blue">
+        <h4>Family collocations</h4>
+        <p><span class="pill">a close family</span><span class="pill">a happy family</span><span class="pill">a large family</span><span class="pill">a small family</span><span class="pill">a typical family</span></p>
+        <button class="speak wide" onclick="speak('a close family, a happy family, a large family, a small family')">🔊 Listen</button>
+      </div>
+      <div class="tile soft-pink">
+        <h4>Adverbs of frequency</h4>
+        <p><span class="pill">always</span><span class="pill">usually</span><span class="pill">often</span><span class="pill">sometimes</span><span class="pill">rarely</span><span class="pill">never</span></p>
+        <button class="speak wide" onclick="speak('always, usually, often, sometimes, rarely, never')">🔊 Listen</button>
+      </div>
+    </div>
+    <div class="tile" style="margin-top:12px">
+      <h4>Sentence starters</h4>
+      <ul class="clean">
+        <li>"There are … people in my family: …"</li>
+        <li>"I'm the … (oldest / youngest / middle) child."</li>
+        <li>"We usually … together at the weekend."</li>
+        <li>"I'm most similar to my … because …"</li>
+        <li>"I get on really well with … "</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PART 1 -->
+  <div class="card blue">
+    <span class="eyebrow blue">Speaking Part 1</span>
+    <h3>💬 Answer simple questions about your family</h3>
+    <p>Read each question, press 🔊 to hear it, then say your own answer out loud (2–3 sentences). Compare with the model answer.</p>
+    <div id="part1"></div>
+  </div>
+
+  <!-- PART 2 cue card + timer -->
+  <div class="card pink">
+    <span class="eyebrow">Speaking Part 2 · Cue card</span>
+    <h3>🕑 Long turn (with timer)</h3>
+    <div class="tile soft-pink">
+      <h4>Describe a member of your family you get on well with.
+        <button class="speak" onclick="speak('Describe a member of your family you get on well with.')">🔊</button></h4>
+      <p>You should say:</p>
+      <ul class="clean">
+        <li>who this person is</li>
+        <li>what they look like</li>
+        <li>what you usually do together</li>
+        <li>and explain why you get on well with them.</li>
+      </ul>
+    </div>
+    <div class="note">⏱️ You get <b>1 minute</b> to prepare and make notes, then you speak for <b>up to 2 minutes</b>. Press start and try to keep talking!</div>
+
+    <div class="timer-box" id="timerBox">
+      <div class="timer-phase" id="timerPhase">Ready?</div>
+      <div class="timer-display" id="timerDisplay">1:00</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" id="timerStart" onclick="startCueTimer()">▶ Start preparation (1 min)</button>
+      <button class="btn ghost" onclick="resetCueTimer()">↺ Reset timer</button>
+    </div>
+
+    <div class="tile" style="margin-top:14px">
+      <h4>✍️ Make your notes here</h4>
+      <div class="reflect"><textarea placeholder="Who: ...&#10;Looks: ...&#10;We do together: ...&#10;Why we get on: ..."></textarea></div>
+    </div>
+
+    <div class="model">
+      <div class="lvl">Model answer · Band 5–6</div>
+      <p>"I'd like to talk about my <span class="hl">older sister</span>. She's twenty-four and she works as a nurse. She's quite tall and she has <span class="hl">long dark hair</span>, and people say we look similar. We usually <span class="hl">cook together</span> at the weekend, and sometimes we watch films. I <span class="hl">get on well with her because</span> she's very kind and she always helps me with my problems. Even though we sometimes argue about small things, we're really close, and she's like a best friend to me."</p>
+      <button class="speak wide" onclick="speak(document.getElementById('p2model').textContent)">🔊 Listen to the model</button>
+      <span id="p2model" style="display:none">I'd like to talk about my older sister. She's twenty-four and she works as a nurse. She's quite tall and she has long dark hair, and people say we look similar. We usually cook together at the weekend, and sometimes we watch films. I get on well with her because she's very kind and she always helps me with my problems. Even though we sometimes argue about small things, we're really close, and she's like a best friend to me.</span>
+    </div>
+  </div>
+
+  <!-- PART 3 -->
+  <div class="card blue">
+    <span class="eyebrow blue">Speaking Part 3 · Discussion</span>
+    <h3>🤔 Deeper questions about relationships</h3>
+    <p>Part 3 questions are more general. Give an opinion and a reason. Press 🔊 to hear each question.</p>
+    <div id="part3"></div>
+  </div>
+
+  <!-- self-assessment -->
+  <div class="card">
+    <h3>✅ Self-assessment checklist</h3>
+    <p>After you speak, tick the boxes. Be honest — this shows what to improve next time.</p>
+    <div class="grid two checklist" id="selfAssess"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="scoreSelf()">See my self-assessment</button>
+    </div>
+    <div class="feedback" id="selffb"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="goTab('vocab')">Go to Vocabulary →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOCABULARY ============ -->
+<section class="panel" id="vocab">
+  <div class="card pink">
+    <span class="eyebrow">Section 4 · Vocabulary &amp; Language</span>
+    <div class="section-head"><span class="emoji">📚</span><h2>Topic vocabulary: Relationships</h2></div>
+    <p>This section has three stages: <b>1)</b> study the word list, <b>2)</b> review with <b>flashcards</b>, then <b>3)</b> do the <b>practice activities</b>. Each card shows the part of speech, pronunciation (IPA), a simple meaning, a Vietnamese meaning, an example, and useful collocations. Click 🔊 to hear the word.</p>
+    <div class="tile soft-blue" style="margin-bottom:14px">
+      <b>📌 What's here:</b> the key words from Unit 1 <b>plus 15 extra IELTS words</b> and important <b>collocations &amp; lexical chunks</b> — the kind of language examiners love to hear.
+    </div>
+    <h3>① Word list</h3>
+    <div class="grid three" id="vocabCards"></div>
+
+    <div class="divider"></div>
+    <h3>🧠 Collocations &amp; lexical chunks for IELTS</h3>
+    <p>These "word partners" and ready-made phrases make your speaking sound natural. Click 🔊 to hear them.</p>
+    <div class="grid two" id="chunkCards"></div>
+  </div>
+
+  <!-- ===== FLASHCARDS ===== -->
+  <div class="card blue" id="flashSection">
+    <span class="eyebrow blue">② Flashcards · Review stage</span>
+    <div class="section-head"><span class="emoji">🃏</span><h2>Vocabulary flashcards</h2></div>
+    <p>Review every word, collocation and chunk here <b>before</b> the practice activities. Tap the card to flip it. Mark each one <b>Known</b> or <b>Need practice</b>, then come back to the ones you find hard.</p>
+
+    <div class="fc-meta">
+      <span id="fcCounter">Card 1 of 1</span>
+      <span id="fcStatus" class="fc-status new">new</span>
+    </div>
+    <div class="fc-progress"><div id="fcProgFill"></div></div>
+
+    <div class="fc-stage">
+      <div class="flashcard" id="flashcard" onclick="flipCard(event)">
+        <div class="fc-inner">
+          <div class="fc-face fc-front">
+            <div class="fc-word" id="fcWord">word</div>
+            <div class="fc-ipa" id="fcIpa">/ipa/</div>
+            <div><span class="fc-pos" id="fcPos">noun</span></div>
+            <button class="speak wide" style="margin-top:14px" onclick="fcSpeak(event)">🔊 Say it</button>
+            <div class="fc-hint">👆 Tap card to flip</div>
+          </div>
+          <div class="fc-face fc-back">
+            <h4 id="fcBackWord">word</h4>
+            <p><span class="lbl">English</span><br><span id="fcDef"></span></p>
+            <p><span class="lbl">🇻🇳 Vietnamese</span><br><span id="fcVi"></span></p>
+            <p><span class="lbl">Example</span><br><i id="fcEx"></i></p>
+            <p id="fcCollWrap"><span class="lbl">Collocations</span><br><span id="fcColl"></span></p>
+            <button class="speak wide" onclick="fcSpeakEx(event)">🔊 Example</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fc-controls">
+      <button class="btn ghost small" onclick="fcPrev()">← Previous</button>
+      <button class="btn blue small" onclick="fcMark('known',event)">✅ Known</button>
+      <button class="btn ghost small" onclick="fcMark('practice',event)">🔁 Need practice</button>
+      <button class="btn ghost small" onclick="fcShuffle()">🔀 Shuffle</button>
+      <button class="btn primary small" onclick="fcNext()">Next →</button>
+    </div>
+    <div class="fc-tally" id="fcTally"></div>
+    <div class="btn-row" style="justify-content:center">
+      <button class="btn ghost small" onclick="fcReset()">↺ Reset flashcards</button>
+      <button class="btn ghost small" onclick="fcOnlyPractice()">🎯 Review 'Need practice' only</button>
+    </div>
+  </div>
+
+  <div class="card pink">
+    <span class="eyebrow">③ Practice activities</span>
+    <div class="section-head"><span class="emoji">🏋️</span><h2>Vocabulary practice</h2></div>
+    <p>Now use the words! There are 11 activities below. Each one gives a score and instant feedback, and you can reset and try again. <span id="vocabScoreBoard" style="font-weight:700"></span></p>
+  </div>
+
+  <!-- Activity 1: matching -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 1 · Match words &amp; definitions</span>
+    <h3>🔗 Match the word to its meaning</h3>
+    <p><b>Instructions:</b> Choose the correct meaning (a–f) for each word (1–6).</p>
+    <div class="match-wrap" id="vMatch"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkVMatch()">Check answers</button>
+      <button class="btn ghost" onclick="resetVMatch()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="vmatchfb"></div>
+  </div>
+
+  <!-- Activity 2: fill blanks -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 2 · Fill in the blanks</span>
+    <h3>✏️ Complete the sentences</h3>
+    <p><b>Instructions:</b> Type the missing word. Use the word box to help you.</p>
+    <div class="tile soft-blue"><b>Word box:</b> supportive · reliable · bond · generation · household · married · save · book</div>
+    <div id="gapFill"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkGapFill()">Check answers</button>
+      <button class="btn ghost" onclick="resetGapFill()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="gapfb"></div>
+  </div>
+
+  <!-- Activity 3: choose correct word -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 3 · Choose the correct word</span>
+    <h3>🔤 Which word is correct?</h3>
+    <p><b>Instructions:</b> Choose the best word to complete each sentence.</p>
+    <div id="chooseWord"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkChoose()">Check answers</button>
+      <button class="btn ghost" onclick="resetChoose()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="choosefb"></div>
+  </div>
+
+  <!-- Activity 4: sentence completion -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 4 · Sentence completion</span>
+    <h3>🧩 Add a linking word</h3>
+    <p><b>Instructions:</b> Choose <b>because</b>, <b>but</b>, <b>so</b> or <b>and</b> to complete each sentence.</p>
+    <div id="sentComp"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkSent()">Check answers</button>
+      <button class="btn ghost" onclick="resetSent()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="sentfb"></div>
+  </div>
+
+  <!-- Activity 5: match with Vietnamese -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 5 · Match words &amp; Vietnamese</span>
+    <h3>🇻🇳 Match the word to its Vietnamese meaning</h3>
+    <p><b>Instructions:</b> Choose the correct Vietnamese meaning (a–f) for each word (1–6).</p>
+    <div class="match-wrap" id="viMatch"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkViMatch()">Check answers</button>
+      <button class="btn ghost" onclick="resetViMatch()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="vimatchfb"></div>
+  </div>
+
+  <!-- Activity 6: match collocations -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 6 · Match the collocations</span>
+    <h3>🧩 Complete the word partners</h3>
+    <p><b>Instructions:</b> Match the start of each collocation/chunk (1–6) with its correct ending (a–f).</p>
+    <div class="match-wrap" id="collMatch"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkCollMatch()">Check answers</button>
+      <button class="btn ghost" onclick="resetCollMatch()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="collmatchfb"></div>
+  </div>
+
+  <!-- Activity 7: drag & drop into sentences -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 7 · Drag &amp; drop</span>
+    <h3>🖐️ Drag the words into the correct sentences</h3>
+    <p><b>Instructions:</b> Drag a word from the box into each gap. (On a phone: tap a word, then tap the gap.)</p>
+    <div class="dd-pool" id="ddPool"></div>
+    <div class="dd-targets" id="ddTargets"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkDD()">Check answers</button>
+      <button class="btn ghost" onclick="buildDD()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="ddfb"></div>
+  </div>
+
+  <!-- Activity 8: categorization -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 8 · Categorization</span>
+    <h3>🗂️ Put each word in the right group</h3>
+    <p><b>Instructions:</b> Drag each word into the correct box. (On a phone: tap a word, then tap a box.)</p>
+    <div class="dd-pool" id="catPool"></div>
+    <div class="cat-cols" id="catCols"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkCat()">Check answers</button>
+      <button class="btn ghost" onclick="buildCat()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="catfb"></div>
+  </div>
+
+  <!-- Activity 9: MCQ -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 9 · Multiple choice</span>
+    <h3>🔘 Choose the correct word</h3>
+    <p><b>Instructions:</b> Read each sentence and choose the best answer.</p>
+    <div id="vMcq"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkVMcq()">Check answers</button>
+      <button class="btn ghost" onclick="resetVMcq()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="vmcqfb"></div>
+  </div>
+
+  <!-- Activity 10: error correction -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 10 · Error correction</span>
+    <h3>🩹 Fix the mistake</h3>
+    <p><b>Instructions:</b> Each sentence has <b>one wrong word</b>. Type the correct word in the box.</p>
+    <div id="errCorr"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkErr()">Check answers</button>
+      <button class="btn ghost" onclick="resetErr()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="errfb"></div>
+  </div>
+
+  <!-- Activity 11: vocabulary in context -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 11 · Vocabulary in context</span>
+    <h3>📖 What does the word mean here?</h3>
+    <p><b>Instructions:</b> Read the short text, then choose the best meaning for the word in <b>bold</b>.</p>
+    <div class="tile soft-blue" id="ctxText"></div>
+    <div id="ctxQ"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkCtx()">Check answers</button>
+      <button class="btn ghost" onclick="resetCtx()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="ctxfb"></div>
+  </div>
+
+  <!-- Activity 12: listening & identify -->
+  <div class="card blue">
+    <span class="eyebrow blue">Practice 12 · Listen &amp; identify</span>
+    <h3>🎧 Choose the word you hear</h3>
+    <p><b>Instructions:</b> Press ▶ to hear a word, then choose it from the three options. (Turn your sound on.)</p>
+    <div id="listenId"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkListenId()">Check answers</button>
+      <button class="btn ghost" onclick="resetListenId()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="listenIdfb"></div>
+  </div>
+
+  <!-- Activity 13: speaking prompts -->
+  <div class="card pink">
+    <span class="eyebrow">Practice 13 · Speaking with target vocabulary</span>
+    <h3>🗣️ Use the words when you speak</h3>
+    <p><b>Instructions:</b> Answer each prompt out loud. Try to use the <b>target words</b> shown. Tick each word as you use it correctly.</p>
+    <div id="speakPrompts"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="scoreSpeakVocab()">Count words I used</button>
+      <button class="btn ghost" onclick="resetSpeakVocab()">↺ Reset</button>
+    </div>
+    <div class="feedback" id="speakVocabfb"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="goTab('review')">Go to Review →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEW ============ -->
+<section class="panel" id="review">
+  <div class="card pink">
+    <span class="eyebrow">Section 5 · Review &amp; Production</span>
+    <div class="section-head"><span class="emoji">🏁</span><h2>Show what you learned</h2></div>
+    <p>Time to put it all together! First a mini listening quiz, then a final speaking task, then some reflection questions.</p>
+  </div>
+
+  <!-- mini listening quiz: Korean celebration (Track 08) -->
+  <div class="card blue">
+    <span class="eyebrow blue">Mini Listening Quiz · Exam skills</span>
+    <h3>🎧 A special family celebration</h3>
+    <p>Nam is showing his friend Mark photos of his niece's <b>first birthday</b> party in Korea (called <i>Dol</i>). Listen and choose <b>A, B or C</b>. Remember: the answers come in the <b>same order</b> as the recording.</p>
+    <div class="audio-box">
+      <div class="track">🔊 Track 08 · Nam &amp; Mark — the Dol celebration</div>
+      <audio controls preload="none" src="audio/u1_08.mp3"></audio>
+    </div>
+    <div id="miniQuiz"></div>
+    <div class="btn-row" style="margin-top:6px">
+      <button class="btn ghost small" onclick="toggle('t3')">📄 Show / hide transcript</button>
+    </div>
+    <div class="transcript" id="t3"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="checkMini()">Check answers</button>
+      <button class="btn ghost" onclick="resetMini()">↺ Try again</button>
+    </div>
+    <div class="feedback" id="minifb"></div>
+  </div>
+
+  <!-- final speaking task -->
+  <div class="card pink">
+    <span class="eyebrow">Final Speaking Task</span>
+    <h3>🗣️ Talk about your family (use your new words!)</h3>
+    <div class="tile soft-pink">
+      <p>Speak for <b>about 1 minute</b>. Try to use at least <b>3 words</b> from this lesson and at least <b>2 linking words</b> (because, and, but, so).</p>
+      <ul class="clean">
+        <li>Do you come from a large or small family?</li>
+        <li>What do you usually do together?</li>
+        <li>Who are you closest to, and why?</li>
+      </ul>
+      <button class="btn ghost small" onclick="miniTimer()">▶ Start 1-minute timer</button>
+      <span id="finalTimer" style="font-weight:800;color:var(--pink);margin-left:10px;">1:00</span>
+    </div>
+    <div class="note">🎯 <b>Target words to use:</b> close family · usually · get on well · celebration · relatives · save</div>
+  </div>
+
+  <!-- reflection -->
+  <div class="card">
+    <h3>💭 Reflection</h3>
+    <p>Think about today's lesson and write short answers.</p>
+    <div class="reflect">
+      <p><b>1. What listening strategy helped you the most?</b></p>
+      <textarea placeholder="For example: reading the questions first / listening for numbers..."></textarea>
+      <p style="margin-top:12px"><b>2. Which speaking question was the most difficult? Why?</b></p>
+      <textarea></textarea>
+      <p style="margin-top:12px"><b>3. Which 3 words from this lesson can you use again in IELTS?</b></p>
+      <textarea placeholder="1. ...  2. ...  3. ..."></textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="finishLesson()">✅ I've finished the lesson!</button>
+    </div>
+    <div class="feedback" id="finishfb"></div>
+  </div>
+</section>
+
+<!-- panels injected below -->
+</main>
+
+<footer>
+  Pre-IELTS 4.0–5.0 · Unit 1: Relationships · Interactive Listening &amp; Speaking lesson.<br>
+  Works offline in any modern browser. 🔊 Sound uses your browser's speech feature.
+</footer>
+
+<script>
+/* ============ NAVIGATION + PROGRESS ============ */
+const TABS=["overview","warmup","listening","speaking","vocab","review"];
+const done={warmup:false,listening:false,speaking:false,vocab:false,review:false};
+function goTab(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+  document.querySelectorAll('#menu button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.getElementById('menu').addEventListener('click',e=>{
+  if(e.target.dataset.tab) goTab(e.target.dataset.tab);
+});
+function markDone(section){
+  done[section]=true; updateProgress();
+}
+function updateProgress(){
+  const total=Object.keys(done).length;
+  const n=Object.values(done).filter(Boolean).length;
+  const pct=Math.round(n/total*100);
+  document.getElementById('progressFill').style.width=pct+'%';
+  const lbl=document.getElementById('progressLabel');
+  lbl.textContent = pct===100 ? "🎉 100% — Great work! You finished the whole lesson."
+      : "Your progress: "+pct+"% — sections completed: "+n+" of "+total;
+}
+
+/* ============ SPEECH SYNTHESIS ============ */
+function speak(text,rate){
+  if(!('speechSynthesis' in window)){alert('Sorry, your browser does not support audio speech.');return;}
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB'; u.rate=rate||0.9; u.pitch=1;
+  window.speechSynthesis.speak(u);
+}
+function stopSpeak(){ if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+
+/* ============ GENERIC MCQ CHECKER ============ */
+/* answers object: {qId: 'A'} ; container has radio inputs name=qId value=A */
+function checkMCQ(quizId, answers, explains, feedbackId, section){
+  let score=0; const keys=Object.keys(answers);
+  keys.forEach(q=>{
+    const sel=document.querySelector('input[name="'+q+'"]:checked');
+    // reset styles
+    document.querySelectorAll('.'+quizId+'-'+q).forEach(l=>l.classList.remove('correct','wrong'));
+    const correctLabel=document.querySelector('.'+quizId+'-'+q+'[data-v="'+answers[q]+'"]');
+    if(correctLabel) correctLabel.classList.add('correct');
+    if(sel){
+      if(sel.value===answers[q]) score++;
+      else{
+        const wl=document.querySelector('.'+quizId+'-'+q+'[data-v="'+sel.value+'"]');
+        if(wl) wl.classList.add('wrong');
+      }
+    }
+  });
+  showResult(feedbackId,score,keys.length,explains,section);
+}
+function showResult(feedbackId,score,total,explains,section){
+  const fb=document.getElementById(feedbackId);
+  fb.className='feedback show '+(score===total?'good':'mid');
+  let html='<span class="score-chip">Score: '+score+'/'+total+'</span> ';
+  html+= score===total ? 'Excellent! All correct. 🎉' : (score>=total/2 ? 'Good try! Check the green answers below. 👍':'Keep going — look at the correct (green) answers. 💪');
+  if(explains) html+='<div class="explain">'+explains+'</div>';
+  fb.innerHTML=html;
+  if(section) markDone(section);
+}
+function toggle(id){ document.getElementById(id).classList.toggle('show'); }
+function norm(v){ return (v||'').toString().trim().toLowerCase().replace(/[£$.,]/g,'').replace(/\s+/g,''); }
+function gradeGap(el,accepted){
+  const val=norm(el.value);
+  const ok=accepted.some(a=>norm(a)===val);
+  el.classList.remove('correct','wrong');
+  el.classList.add(ok?'correct':'wrong');
+  return ok;
+}
+
+/* ============ WARM-UP: prediction ============ */
+const predictWords=[
+  {w:'book a table',good:true},{w:'how many people',good:true},{w:'what date',good:true},
+  {w:'total cost',good:true},{w:'a private room',good:true},
+  {w:'homework essay',good:false},{w:'football score',good:false}
+];
+const pc=document.getElementById('predict');
+predictWords.forEach((o,i)=>{
+  const l=document.createElement('label'); l.className='opt'; l.style.display='inline-block'; l.style.margin='4px'; l.style.width='auto';
+  l.innerHTML='<input type="checkbox" data-good="'+o.good+'">'+o.w;
+  pc.appendChild(l);
+});
+function revealPredict(){
+  document.querySelectorAll('#predict label').forEach(l=>{
+    const good=l.querySelector('input').dataset.good==='true';
+    l.classList.add(good?'correct':'wrong');
+  });
+  const fb=document.getElementById('predictFb');
+  fb.className='feedback show good';
+  fb.innerHTML='✅ Green = common in a restaurant booking. Predicting words like these helps you listen better!';
+  markDone('warmup');
+}
+
+/* ============ Pre-listening vocab ============ */
+const preVocabData=[
+  {en:'book (a table)',vi:'đặt (bàn)',def:'to arrange to have something later',ex:"I'd like to book a table for six people."},
+  {en:'private room',vi:'phòng riêng',def:'a room for only your group',ex:'The private room can seat up to 20 people.'},
+  {en:'total cost',vi:'tổng chi phí',def:'all the money you must pay',ex:'The total cost is £318.'},
+  {en:'a sale',vi:'đợt giảm giá',def:'when prices are lower than normal',ex:"We've got a sale on at the moment."},
+  {en:'gift wrapping',vi:'gói quà',def:'putting nice paper around a present',ex:'Gift wrapping costs £5.'},
+  {en:'save (money)',vi:'tiết kiệm (tiền)',def:'to pay less money',ex:'You can save £10 in the sale.'}
+];
+const pv=document.getElementById('preVocab');
+preVocabData.forEach(v=>{
+  const d=document.createElement('div'); d.className='tile';
+  d.innerHTML='<h4>'+v.en+' <button class="speak" onclick="speak(\''+v.en.replace(/[()']/g,'')+'\')">🔊</button></h4>'
+    +'<p style="margin:2px 0"><b>VI:</b> '+v.vi+'</p>'
+    +'<p style="margin:2px 0;font-size:.9rem">'+v.def+'</p>'
+    +'<p style="margin:4px 0 0;font-size:.88rem;color:#556070"><i>'+v.ex+'</i></p>';
+  pv.appendChild(d);
+});
+
+/* ============ LISTENING TRANSCRIPTS (real coursebook scripts) ============ */
+/* Track 02 — openings of Conversation 1 & 2 */
+document.getElementById('t1').innerHTML=
+ '<p style="margin:2px 0"><b>Conversation 1</b></p>'
+ +'<div class="line"><b>Manager:</b> Good evening, Willowtree Hotel. How can I help?</div>'
+ +'<div class="line"><b>Customer:</b> Hello, I\'d like to <u>make a reservation</u> in your restaurant for next Saturday evening.</div>'
+ +'<div class="line"><b>Manager:</b> Next Saturday? If you hold on, I\'ll just check … So … for how many people?</div>'
+ +'<div class="line"><b>Customer:</b> I need a table for 12 – it\'s my <u>husband\'s</u> 30th birthday, so we\'re having a <u>celebration dinner</u>.</div>'
+ +'<p style="margin:8px 0 2px"><b>Conversation 2</b></p>'
+ +'<div class="line"><b>Sales assistant:</b> Good afternoon, can I help you?</div>'
+ +'<div class="line"><b>Customer:</b> Yes, I\'m looking for a <u>gift</u> for my sister. She\'s going to be 18 next week. So I thought a piece of jewellery would be nice.</div>'
+ +'<div class="line"><b>Sales assistant:</b> Good idea! Do you have anything particular in mind – a necklace, perhaps?</div>'
+ +'<div class="line"><b>Customer:</b> Mm, she has so many necklaces. I was thinking of a pair of <u>earrings</u>, possibly.</div>';
+/* Track 04 + 05 — booking details + price */
+document.getElementById('t3form').innerHTML=
+ '<p style="margin:2px 0"><b>Track 04</b></p>'
+ +'<div class="line"><b>Customer:</b> I need a table for <u>12</u> – it\'s my husband\'s 30th birthday…</div>'
+ +'<div class="line"><b>Manager:</b> So that\'s 12 people for the 16th.</div>'
+ +'<div class="line"><b>Customer:</b> No, no, it\'s the day after – the <u>17th</u> – Saturday the 17th, at eight o\'clock.</div>'
+ +'<div class="line"><b>Manager:</b> …our main restaurant is fully booked, but we have a small private room. It can seat up to <u>20</u> people.</div>'
+ +'<p style="margin:8px 0 2px"><b>Track 05</b></p>'
+ +'<div class="line"><b>Manager:</b> We offer a set three-course menu for <u>£23</u> per person… for the food and the room, that will come to <u>£318</u>.</div>'
+ +'<div class="line"><b>Customer:</b> Did you say three hundred and eighty pounds?</div>'
+ +'<div class="line"><b>Manager:</b> No, three hundred and eighteen.</div>';
+/* Track 06 — gift shop */
+document.getElementById('t2').innerHTML=
+ '<div class="line"><b>Customer:</b> Oh, really? So, how much are they?</div>'
+ +'<div class="line"><b>Sales assistant:</b> Well, they <u>were £30</u>, but actually we\'ve got a <u>sale</u> on at the moment, so they\'re a little cheaper – <u>only £20</u>. So you can <u>save £10</u>!</div>'
+ +'<div class="line"><b>Customer:</b> Great. I\'ll take them.</div>'
+ +'<div class="line"><b>Sales assistant:</b> And would you like me to gift wrap them? For <u>£4</u> we give you a pretty box… Or for <u>£5</u> you can have our <u>luxury</u> wrapping service, which includes a silver box and silver ribbon. …a card… will be £2 extra.</div>'
+ +'<div class="line"><b>Customer:</b> Well, it\'s a special birthday so I\'ll take the <u>luxury</u> option. But I already have a card, thank you.</div>';
+
+/* Task 1 MCQ (Track 02) */
+function checkT1(){
+  checkMCQ('task1',{q1:'B',q2:'B',q3:'A',q4:'B',q5:'B'},
+    'Conv 1 = arranging a birthday celebration dinner. Conv 2 = choosing a gift. In Conv 1 the customer wants to <b>make a reservation</b> (book a table). In Conv 2 the customer looks at <b>earrings</b>. The Conv 1 customer talks about "my husband", so she is <b>female</b>.',
+    't1fb','listening');
+}
+function resetT1(){
+  ['q1','q2','q3','q4','q5'].forEach(q=>{document.querySelectorAll('input[name="'+q+'"]').forEach(i=>i.checked=false);
+    document.querySelectorAll('.task1-'+q).forEach(l=>l.classList.remove('correct','wrong'));});
+  document.getElementById('t1fb').className='feedback';
+}
+
+/* Task 2 — listening for numbers (Track 03) */
+const numData=[
+  {k:'a',opts:['1st','3rd'],a:'3rd'},
+  {k:'b',opts:['$10.50','$10.15'],a:'$10.50'},
+  {k:'c',opts:['6th','5th'],a:'6th'},
+  {k:'d',opts:['17','70'],a:'70'},
+  {k:'e',opts:['19','90'],a:'19'},
+  {k:'f',opts:['52','62'],a:'62'},
+  {k:'g',opts:['£110','£810'],a:'£110'},
+  {k:'h',opts:['22nd','27th'],a:'27th'}
+];
+const ng=document.getElementById('numGrid');
+numData.forEach((n,i)=>{
+  const d=document.createElement('div'); d.className='numq';
+  let html='<b>'+n.k+'.</b><div class="pairbtns">';
+  n.opts.forEach(o=>{html+='<label class="num'+i+'" data-v="'+o+'"><input type="radio" name="num'+i+'" value="'+o+'"><span>'+o+'</span></label>';});
+  html+='</div>';
+  d.innerHTML=html; ng.appendChild(d);
+});
+function checkNums(){
+  let s=0;
+  numData.forEach((n,i)=>{
+    document.querySelectorAll('.num'+i).forEach(l=>l.classList.remove('correct','wrong'));
+    const cl=document.querySelector('.num'+i+'[data-v="'+n.a+'"]'); if(cl) cl.classList.add('correct');
+    const sel=document.querySelector('input[name="num'+i+'"]:checked');
+    if(sel){ if(sel.value===n.a) s++; else{const wl=document.querySelector('.num'+i+'[data-v="'+CSS.escape(sel.value)+'"]'); if(wl) wl.classList.add('wrong');} }
+  });
+  showResult('numfb',s,numData.length,'Answers: a 3rd · b $10.50 · c 6th · d 70 · e 19 · f 62 · g £110 · h 27th. Take care with -teen / -ty numbers!','listening');
+}
+function resetNums(){numData.forEach((n,i)=>{document.querySelectorAll('input[name="num'+i+'"]').forEach(x=>x.checked=false);document.querySelectorAll('.num'+i).forEach(l=>l.classList.remove('correct','wrong'));});document.getElementById('numfb').className='feedback';}
+
+/* Task 3 form (Tracks 04+05) */
+function checkForm(){
+  let s=0;
+  s+=gradeGap(document.getElementById('f1'),['12','twelve']);
+  s+=gradeGap(document.getElementById('f2'),['17','17th','seventeen','seventeenth','the 17th']);
+  s+=gradeGap(document.getElementById('f3'),['20','twenty']);
+  s+=gradeGap(document.getElementById('f4'),['23','23pounds']);
+  s+=gradeGap(document.getElementById('f5'),['318','318pounds']);
+  showResult('formfb',s,5,'A table for <b>12</b>. Correction: "the day after – the <b>17th</b>" (not the 16th). Private room seats up to <b>20</b>. Menu = <b>£23</b> per person. Total = <b>£318</b> (not £380 — listen for "eighteen" not "eighty").','listening');
+}
+function resetForm(){['f1','f2','f3','f4','f5'].forEach(id=>{const e=document.getElementById(id);e.value='';e.classList.remove('correct','wrong');});document.getElementById('formfb').className='feedback';}
+
+/* Task 4 short answer (Track 06) */
+function checkShort(){
+  let s=0;
+  s+=gradeGap(document.getElementById('s1'),['earrings','earring']);
+  s+=gradeGap(document.getElementById('s2'),['30','thirty']);
+  s+=gradeGap(document.getElementById('s3'),['20','twenty']);
+  s+=gradeGap(document.getElementById('s4'),['10','ten']);
+  s+=gradeGap(document.getElementById('s5'),['luxury']);
+  s+=gradeGap(document.getElementById('s6'),['5','five']);
+  showResult('shortfb',s,6,'The earrings were <b>£30</b> but are <b>£20</b> in the sale, so the customer saves <b>£10</b>. The customer chooses the <b>luxury</b> wrapping, which costs <b>£5</b>.','listening');
+}
+function resetShort(){['s1','s2','s3','s4','s5','s6'].forEach(id=>{const e=document.getElementById(id);e.value='';e.classList.remove('correct','wrong');});document.getElementById('shortfb').className='feedback';}
+
+/* Task 5 complete the conversation (Track 07) */
+function checkGaps07(){
+  let s=0;
+  s+=gradeGap(document.getElementById('g1'),['30','thirty']);
+  s+=gradeGap(document.getElementById('g2'),['20','twenty']);
+  s+=gradeGap(document.getElementById('g3'),['10','ten']);
+  showResult('g07fb',s,3,'They <b>were 30</b> pounds → <b>only 20</b> pounds now → so you save <b>10</b> pounds.','listening');
+}
+function resetGaps07(){['g1','g2','g3'].forEach(id=>{const e=document.getElementById(id);e.value='';e.classList.remove('correct','wrong');});document.getElementById('g07fb').className='feedback';}
+
+/* Task 4 matching */
+const matchLeft=[
+  {n:1,t:'a goodbye party'},{n:2,t:'a soccer game'},{n:3,t:'a celebration'},
+  {n:4,t:'brother and sister'},{n:5,t:'work in the same office'}
+];
+const matchRight=[['a','members of the same family'],['b','colleagues'],['c','a leaving party'],['d','a birthday party'],['e','a football match']];
+const matchAnswer={1:'c',2:'e',3:'d',4:'a',5:'b'};
+const mg=document.getElementById('matchGrid');
+matchLeft.forEach(item=>{
+  const d=document.createElement('div'); d.className='match-item';
+  let opts='<option value="">?</option>'+matchRight.map(r=>'<option value="'+r[0]+'">'+r[0]+'</option>').join('');
+  d.innerHTML='<select id="m'+item.n+'">'+opts+'</select><b>'+item.n+'.</b> '+item.t;
+  mg.appendChild(d);
+});
+const legend=document.createElement('div'); legend.className='tile soft-blue'; legend.style.gridColumn='1/-1';
+legend.innerHTML='<b>Options:</b> '+matchRight.map(r=>'<b>'+r[0]+'</b> = '+r[1]).join(' &nbsp;·&nbsp; ');
+mg.appendChild(legend);
+function checkMatch(){
+  let s=0;
+  Object.keys(matchAnswer).forEach(n=>{
+    const sel=document.getElementById('m'+n);
+    sel.style.borderColor='';
+    if(sel.value===matchAnswer[n]){s++; sel.style.borderColor='var(--green)'; sel.style.background='var(--green-soft)';}
+    else{sel.style.borderColor='var(--red)'; sel.style.background='var(--red-soft)';}
+  });
+  showResult('matchfb',s,5,'1-c (goodbye=leaving), 2-e (soccer=football), 3-d, 4-a (brother & sister = same family), 5-b (same office = colleagues).','listening');
+}
+function resetMatch(){Object.keys(matchAnswer).forEach(n=>{const s=document.getElementById('m'+n);s.value='';s.style.borderColor='';s.style.background='';});document.getElementById('matchfb').className='feedback';}
+
+/* ============ SPEAKING PART 1 ============ */
+const part1Q=[
+  {q:"Do you come from a large family?",
+   m:"No, I have quite a small family. There are four of us: my parents, my younger brother and me. We're a close, happy family and we live together in a flat in the city."},
+  {q:"Is there anything you usually do together with your family?",
+   m:"Yes, we usually have dinner together every evening, and at the weekend we often go out for a walk. We also like cooking together, because everyone enjoys food!"},
+  {q:"How often do you see your grandparents?",
+   m:"I don't see them very often because they live in another city, but I call them every week. We usually visit them during the holidays, and I really enjoy that."},
+  {q:"Who are you most similar to in your family?",
+   m:"I think I'm most similar to my mother. We look alike and we both love reading. However, I'm a bit quieter than her, so we're not exactly the same."}
+];
+const p1=document.getElementById('part1');
+part1Q.forEach((o,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  d.innerHTML='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+o.q
+    +' <button class="speak" onclick="speak(&quot;'+o.q.replace(/"/g,'')+'&quot;)">🔊</button></div>'
+    +'<button class="btn ghost small" onclick="toggle(\'p1m'+i+'\')">💡 Show model answer</button>'
+    +'<div class="model" id="p1m'+i+'" style="display:none"><div class="lvl">Model · Band 5–6</div><p>'+o.m+'</p>'
+    +'<button class="speak wide" onclick="speak(&quot;'+o.m.replace(/"/g,'')+'&quot;)">🔊 Listen</button></div>';
+  p1.appendChild(d);
+});
+
+/* ============ SPEAKING PART 3 ============ */
+const part3Q=[
+  {q:"Do you think families today spend enough time together?",
+   m:"I think some families spend less time together now because parents work long hours and children are often busy with phones. However, many families still eat together, so it depends on the family."},
+  {q:"How have families changed compared to the past?",
+   m:"In the past, families were usually larger and grandparents often lived in the same house. Nowadays families are smaller, and many people live far away from their relatives because of work."},
+  {q:"Why is it important to have a good relationship with your family?",
+   m:"It's important because your family supports you when you have problems. A good relationship also makes you feel happier and more confident, so I think family relationships really matter."}
+];
+const p3=document.getElementById('part3');
+part3Q.forEach((o,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  d.innerHTML='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+o.q
+    +' <button class="speak" onclick="speak(&quot;'+o.q.replace(/"/g,'')+'&quot;)">🔊</button></div>'
+    +'<button class="btn ghost small" onclick="toggle(\'p3m'+i+'\')">💡 Show model answer</button>'
+    +'<div class="model" id="p3m'+i+'" style="display:none"><div class="lvl">Model · Band 5–6</div><p>'+o.m+'</p>'
+    +'<button class="speak wide" onclick="speak(&quot;'+o.m.replace(/"/g,'')+'&quot;)">🔊 Listen</button></div>';
+  p3.appendChild(d);
+});
+
+/* ============ CUE CARD TIMER ============ */
+let cueInt=null;
+function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+function startCueTimer(){
+  clearInterval(cueInt);
+  const box=document.getElementById('timerBox'), phase=document.getElementById('timerPhase'),
+        disp=document.getElementById('timerDisplay'), btn=document.getElementById('timerStart');
+  btn.disabled=true; btn.textContent='Timer running…';
+  let t=60; box.className='timer-box prep'; phase.textContent='⏳ Preparation — make notes'; disp.textContent=fmt(t);
+  cueInt=setInterval(()=>{
+    t--; disp.textContent=fmt(t);
+    if(t<=0){
+      clearInterval(cueInt);
+      if('speechSynthesis' in window){speak("Okay, now start speaking.");}
+      let sp=120; box.className='timer-box speak-phase'; phase.textContent='🎤 Speak now! (up to 2 minutes)'; disp.textContent=fmt(sp);
+      cueInt=setInterval(()=>{
+        sp--; disp.textContent=fmt(sp);
+        if(sp<=0){clearInterval(cueInt); phase.textContent='✅ Time! Well done.'; box.className='timer-box';
+          disp.textContent="0:00"; btn.disabled=false; btn.textContent='▶ Start preparation (1 min)'; markDone('speaking');}
+      },1000);
+    }
+  },1000);
+}
+function resetCueTimer(){
+  clearInterval(cueInt); stopSpeak();
+  const box=document.getElementById('timerBox'), btn=document.getElementById('timerStart');
+  box.className='timer-box'; document.getElementById('timerPhase').textContent='Ready?';
+  document.getElementById('timerDisplay').textContent='1:00'; btn.disabled=false; btn.textContent='▶ Start preparation (1 min)';
+}
+
+/* ============ SELF-ASSESSMENT ============ */
+const selfItems=[
+  {cat:'🗣️ Fluency',qs:['I kept talking without long pauses','I used linking words (and, but, because, so)']},
+  {cat:'📚 Vocabulary',qs:['I used family collocations (close/happy family)','I used adverbs of frequency (usually, often)']},
+  {cat:'✏️ Grammar',qs:['I used correct verb + s (she works, he lives)','I made full sentences, not single words']},
+  {cat:'🔊 Pronunciation',qs:['I said the -s endings clearly','I spoke clearly and was easy to understand']}
+];
+const sa=document.getElementById('selfAssess');
+let saCount=0;
+selfItems.forEach(g=>{
+  const box=document.createElement('div'); box.className='tile';
+  let inner='<h4>'+g.cat+'</h4>';
+  g.qs.forEach(q=>{ inner+='<label><input type="checkbox" class="sacheck">'+q+'</label>'; saCount++; });
+  box.innerHTML=inner; sa.appendChild(box);
+});
+function scoreSelf(){
+  const total=document.querySelectorAll('.sacheck').length;
+  const n=document.querySelectorAll('.sacheck:checked').length;
+  const fb=document.getElementById('selffb');
+  fb.className='feedback show '+(n>=total*0.75?'good':'mid');
+  let msg=n>=total*0.75?'Great — you did most things well! 🎉':(n>=total/2?'Good progress! Pick one or two boxes to improve next time. 👍':'A good start — focus on the unticked skills next time. 💪');
+  fb.innerHTML='<span class="score-chip">'+n+'/'+total+' ticked</span> '+msg;
+  markDone('speaking');
+}
+
+/* ============ MASTER VOCABULARY DATASET ============ */
+/* w=word, pos, ipa, def, vi, ex, coll(=collocations) */
+const WORDS=[
+  {w:'relatives',pos:'noun',ipa:'/ˈrelətɪvz/',def:'people in your wider family, such as aunts, uncles and cousins',vi:'họ hàng',ex:'I have a lot of relatives in my hometown.',coll:'close relatives · distant relatives'},
+  {w:'sibling',pos:'noun',ipa:'/ˈsɪblɪŋ/',def:'a brother or a sister',vi:'anh/chị/em ruột',ex:'I have two siblings: one brother and one sister.',coll:'an older sibling · a younger sibling'},
+  {w:'immediate family',pos:'noun',ipa:'/ɪˈmiːdiət ˈfæməli/',def:'your closest family: parents, brothers and sisters',vi:'gia đình ruột thịt',ex:'My immediate family is quite small.',coll:'my immediate family'},
+  {w:'extended family',pos:'noun',ipa:'/ɪkˈstendɪd ˈfæməli/',def:'your wider family, including grandparents, aunts and uncles',vi:'đại gia đình',ex:'My extended family is very big.',coll:'a large extended family'},
+  {w:'only child',pos:'noun',ipa:'/ˈəʊnli tʃaɪld/',def:'a child who has no brothers or sisters',vi:'con một',ex:'She is an only child, so she has no siblings.',coll:'an only child'},
+  {w:'household',pos:'noun',ipa:'/ˈhaʊshəʊld/',def:'all the people who live together in one house',vi:'hộ gia đình',ex:'There are five people in our household.',coll:'a busy household'},
+  {w:'generation',pos:'noun',ipa:'/ˌdʒenəˈreɪʃn/',def:'people who were born around the same time',vi:'thế hệ',ex:'Three generations live in my grandparents’ house.',coll:'the older generation · a new generation'},
+  {w:'bond',pos:'noun',ipa:'/bɒnd/',def:'a close feeling or connection between people',vi:'sự gắn kết',ex:'There is a strong bond between me and my brother.',coll:'a strong bond · a close bond'},
+  {w:'colleagues',pos:'noun',ipa:'/ˈkɒliːɡz/',def:'the people you work with',vi:'đồng nghiệp',ex:'My colleagues and I had lunch together.',coll:'work colleagues'},
+  {w:'a celebration',pos:'noun',ipa:'/ˌselɪˈbreɪʃn/',def:'a special party or event for a happy occasion',vi:'buổi lễ ăn mừng',ex:'A wedding is a big celebration.',coll:'a family celebration · a birthday celebration'},
+  {w:'a leaving party',pos:'noun',ipa:'/ə ˈliːvɪŋ ˈpɑːti/',def:'a party for someone who is going away',vi:'tiệc chia tay',ex:'We had a leaving party for our teacher.',coll:'have a leaving party'},
+  {w:'good fortune',pos:'noun',ipa:'/ɡʊd ˈfɔːtʃuːn/',def:'good luck',vi:'sự may mắn',ex:'The red colour means good fortune.',coll:'bring good fortune'},
+  {w:'collocation',pos:'noun',ipa:'/ˌkɒləˈkeɪʃn/',def:'words that often go together, e.g. "a fast car"',vi:'cụm từ đi với nhau',ex:'"Close family" is a useful collocation.',coll:'a common collocation'},
+  {w:'a close family',pos:'noun phrase',ipa:'/ə kləʊs ˈfæməli/',def:'a family whose members love and support each other',vi:'gia đình gắn bó',ex:"We're a close family and we help each other.",coll:'a very close family'},
+  {w:'a typical family',pos:'noun phrase',ipa:'/ə ˈtɪpɪkl ˈfæməli/',def:'a normal, ordinary family',vi:'gia đình điển hình',ex:"We're quite a typical family for my country.",coll:'a typical family'},
+  {w:'supportive',pos:'adjective',ipa:'/səˈpɔːtɪv/',def:'giving help and encouragement',vi:'biết hỗ trợ, động viên',ex:'My parents are very supportive of my studies.',coll:'a supportive family · supportive parents'},
+  {w:'reliable',pos:'adjective',ipa:'/rɪˈlaɪəbl/',def:'someone you can trust and depend on',vi:'đáng tin cậy',ex:'My sister is reliable — she always keeps her promises.',coll:'a reliable person'},
+  {w:'get on well with',pos:'phrasal verb',ipa:'/ɡet ɒn wel wɪð/',def:'to have a good relationship with someone',vi:'hòa hợp/thân với',ex:'I get on well with my cousins.',coll:'get on really well with someone'},
+  {w:'take after',pos:'phrasal verb',ipa:'/teɪk ˈɑːftə/',def:'to look or behave like an older relative',vi:'giống (người thân)',ex:'I take after my mother — we both love reading.',coll:'take after your mum/dad'},
+  {w:'bring up',pos:'phrasal verb',ipa:'/brɪŋ ʌp/',def:'to look after and educate a child until they grow up (= raise)',vi:'nuôi dạy',ex:'My grandparents helped to bring me up.',coll:'bring up / raise children'},
+  {w:'look up to',pos:'phrasal verb',ipa:'/lʊk ʌp tuː/',def:'to admire and respect someone',vi:'kính trọng, ngưỡng mộ',ex:'I look up to my older brother.',coll:'look up to someone'},
+  {w:'get married',pos:'verb',ipa:'/ɡet ˈmærid/',def:'to become husband and wife',vi:'kết hôn',ex:'My sister is getting married next year.',coll:'get married to someone'},
+  {w:'save',pos:'verb',ipa:'/seɪv/',def:'to pay less money, or to keep money for later',vi:'tiết kiệm',ex:'In the sale you can save ten pounds.',coll:'save money'},
+  {w:'book a table',pos:'verb phrase',ipa:'/bʊk ə ˈteɪbl/',def:'to arrange a table at a restaurant in advance',vi:'đặt bàn',ex:"I'd like to book a table for six people.",coll:'book a table for (six)'},
+  {w:'private room',pos:'noun',ipa:'/ˈpraɪvət ruːm/',def:'a room for only your group',vi:'phòng riêng',ex:'The private room can seat up to 20 people.',coll:'a private room'},
+  {w:'total cost',pos:'noun',ipa:'/ˈtəʊtl kɒst/',def:'all the money you have to pay',vi:'tổng chi phí',ex:'The total cost is £318.',coll:'the total cost'},
+  {w:'a sale',pos:'noun',ipa:'/ə seɪl/',def:'a time when prices are lower than normal',vi:'đợt giảm giá',ex:"We've got a sale on at the moment.",coll:'have a sale on'},
+  {w:'gift wrapping',pos:'noun',ipa:'/ɡɪft ˈræpɪŋ/',def:'putting nice paper around a present',vi:'gói quà',ex:'Gift wrapping costs five pounds.',coll:'gift wrapping'}
+];
+const CHUNKS=[
+  {w:'a close-knit family',pos:'collocation',ipa:'/ə ˌkləʊs ˈnɪt ˈfæməli/',def:'a family whose members are very close and support each other',vi:'gia đình khăng khít',ex:'We are a close-knit family and we tell each other everything.',coll:'a close-knit family'},
+  {w:'get on really well with',pos:'lexical chunk',ipa:'/ɡet ɒn ˈrɪəli wel wɪð/',def:'to have a very good relationship with someone',vi:'rất hợp/thân với ai',ex:'I get on really well with my dad.',coll:'get on really well with someone'},
+  {w:'have a lot in common',pos:'lexical chunk',ipa:'/hæv ə lɒt ɪn ˈkɒmən/',def:'to share many of the same interests or ideas',vi:'có nhiều điểm chung',ex:'My brother and I have a lot in common.',coll:'have a lot in common with someone'},
+  {w:'be there for someone',pos:'lexical chunk',ipa:'/biː ðeə fɔː ˈsʌmwʌn/',def:'to support and help someone when they need it',vi:'luôn ở bên/hỗ trợ ai',ex:'My family is always there for me.',coll:'always be there for someone'},
+  {w:'spend quality time together',pos:'collocation',ipa:'/spend ˈkwɒləti taɪm təˈɡeðə/',def:'to spend good, meaningful time with people you love',vi:'dành thời gian chất lượng bên nhau',ex:'At weekends we spend quality time together.',coll:'spend quality time with family'},
+  {w:'a strong family bond',pos:'collocation',ipa:'/ə strɒŋ ˈfæməli bɒnd/',def:'a strong connection between family members',vi:'sự gắn kết gia đình bền chặt',ex:'We have a strong family bond.',coll:'a strong family bond'},
+  {w:'look up to your parents',pos:'collocation',ipa:'/lʊk ʌp tuː jɔː ˈpeərənts/',def:'to admire and respect your parents',vi:'kính trọng cha mẹ',ex:'I really look up to my parents.',coll:'look up to your parents'},
+  {w:'raise a family',pos:'collocation',ipa:'/reɪz ə ˈfæməli/',def:'to have children and bring them up',vi:'gây dựng/nuôi một gia đình',ex:'They want to raise a family in the countryside.',coll:'raise a family'}
+];
+const FLASH=WORDS.concat(CHUNKS);
+
+/* ---- render word list ---- */
+function cleanSpeak(t){return t.replace(/[()"'/]/g,'');}
+const vc=document.getElementById('vocabCards');
+WORDS.forEach(v=>{
+  const d=document.createElement('div'); d.className='tile';
+  d.innerHTML='<h4>'+v.w+' <span class="pos">'+v.pos+'</span> <button class="speak" onclick="speak(\''+cleanSpeak(v.w)+'\')">🔊</button></h4>'
+   +'<p style="margin:2px 0" class="ipa">'+v.ipa+'</p>'
+   +'<p style="margin:2px 0;font-size:.9rem">'+v.def+'</p>'
+   +'<p style="margin:2px 0"><b>🇻🇳 </b>'+v.vi+'</p>'
+   +'<p style="margin:4px 0 0;font-size:.88rem;color:#556070"><i>'+v.ex+'</i></p>'
+   +'<div class="chunk-list"><span class="pill">'+v.coll.split(' · ').join('</span><span class="pill">')+'</span></div>';
+  vc.appendChild(d);
+});
+/* ---- render chunk cards ---- */
+const cc=document.getElementById('chunkCards');
+CHUNKS.forEach(v=>{
+  const d=document.createElement('div'); d.className='tile soft-pink';
+  d.innerHTML='<h4>'+v.w+' <button class="speak" onclick="speak(\''+cleanSpeak(v.w)+'\')">🔊</button></h4>'
+   +'<p style="margin:2px 0" class="ipa">'+v.ipa+'</p>'
+   +'<p style="margin:2px 0;font-size:.9rem">'+v.def+'</p>'
+   +'<p style="margin:2px 0"><b>🇻🇳 </b>'+v.vi+'</p>'
+   +'<p style="margin:4px 0 0;font-size:.88rem;color:#556070"><i>'+v.ex+'</i></p>';
+  cc.appendChild(d);
+});
+
+/* ============ FLASHCARDS ============ */
+let fcOrder=FLASH.map((_,i)=>i);
+let fcPos=0;
+const fcState={}; /* index -> 'known'|'practice' */
+function fcCurrent(){return FLASH[fcOrder[fcPos]];}
+function renderCard(){
+  const v=fcCurrent(); const idx=fcOrder[fcPos];
+  const card=document.getElementById('flashcard'); card.classList.remove('flipped');
+  document.getElementById('fcWord').textContent=v.w;
+  document.getElementById('fcIpa').textContent=v.ipa;
+  document.getElementById('fcPos').textContent=v.pos;
+  document.getElementById('fcBackWord').textContent=v.w;
+  document.getElementById('fcDef').textContent=v.def;
+  document.getElementById('fcVi').textContent=v.vi;
+  document.getElementById('fcEx').textContent=v.ex;
+  document.getElementById('fcColl').textContent=v.coll||'—';
+  document.getElementById('fcCounter').textContent='Card '+(fcPos+1)+' of '+fcOrder.length;
+  const st=fcState[idx]||'new';
+  const badge=document.getElementById('fcStatus');
+  badge.className='fc-status '+st; badge.textContent= st==='known'?'known':(st==='practice'?'need practice':'new');
+  document.getElementById('fcProgFill').style.width=((fcPos+1)/fcOrder.length*100)+'%';
+  updateTally();
+}
+function flipCard(e){ if(e&&e.target.closest('button')) return; document.getElementById('flashcard').classList.toggle('flipped'); }
+function fcSpeak(e){ e.stopPropagation(); speak(cleanSpeak(fcCurrent().w)); }
+function fcSpeakEx(e){ e.stopPropagation(); speak(fcCurrent().ex); }
+function fcNext(){ fcPos=(fcPos+1)%fcOrder.length; renderCard(); }
+function fcPrev(){ fcPos=(fcPos-1+fcOrder.length)%fcOrder.length; renderCard(); }
+function fcShuffle(){ for(let i=fcOrder.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fcOrder[i],fcOrder[j]]=[fcOrder[j],fcOrder[i]];} fcPos=0; renderCard(); }
+function fcMark(status,e){ if(e) e.stopPropagation(); fcState[fcOrder[fcPos]]=status; renderCard(); if(fcPos<fcOrder.length-1) fcNext(); else markDone('vocab'); }
+function updateTally(){
+  const vals=Object.values(fcState);
+  const k=vals.filter(x=>x==='known').length, p=vals.filter(x=>x==='practice').length;
+  document.getElementById('fcTally').innerHTML='✅ Known: <b class="k">'+k+'</b> &nbsp;·&nbsp; 🔁 Need practice: <b class="p">'+p+'</b> &nbsp;·&nbsp; Total: '+FLASH.length;
+  if(k+p>=FLASH.length) markDone('vocab');
+}
+function fcReset(){ fcOrder=FLASH.map((_,i)=>i); fcPos=0; for(const k in fcState) delete fcState[k]; renderCard(); }
+function fcOnlyPractice(){
+  const list=FLASH.map((_,i)=>i).filter(i=>fcState[i]==='practice');
+  if(list.length===0){ alert('No cards marked "Need practice" yet. Mark some cards first!'); return; }
+  fcOrder=list; fcPos=0; renderCard();
+}
+renderCard();
+
+/* ============ PRACTICE 1: match words & definitions ============ */
+const vLeft=[{n:1,t:'relatives'},{n:2,t:'sibling'},{n:3,t:'supportive'},{n:4,t:'take after'},{n:5,t:'a leaving party'},{n:6,t:'household'}];
+const vRight=[['a','a brother or sister'],['b','giving help and encouragement'],['c','people in your wider family'],['d','all the people who live in one house'],['e','to look or behave like an older relative'],['f','a party for someone who is going away']];
+const vAns={1:'c',2:'a',3:'b',4:'e',5:'f',6:'d'};
+const vm=document.getElementById('vMatch');
+vLeft.forEach(item=>{
+  const d=document.createElement('div'); d.className='match-item';
+  let opts='<option value="">?</option>'+vRight.map(r=>'<option value="'+r[0]+'">'+r[0]+'</option>').join('');
+  d.innerHTML='<select id="vm'+item.n+'">'+opts+'</select><b>'+item.n+'.</b> '+item.t;
+  vm.appendChild(d);
+});
+const vleg=document.createElement('div'); vleg.className='tile soft-blue'; vleg.style.gridColumn='1/-1';
+vleg.innerHTML='<b>Meanings:</b> '+vRight.map(r=>'<b>'+r[0]+'</b> = '+r[1]).join(' &nbsp;·&nbsp; ');
+vm.appendChild(vleg);
+function checkVMatch(){
+  let s=0;
+  Object.keys(vAns).forEach(n=>{const sel=document.getElementById('vm'+n);
+    if(sel.value===vAns[n]){s++;sel.style.borderColor='var(--green)';sel.style.background='var(--green-soft)';}
+    else{sel.style.borderColor='var(--red)';sel.style.background='var(--red-soft)';}});
+  showResult('vmatchfb',s,6,'1-c, 2-a, 3-b, 4-e, 5-f, 6-d.','vocab');
+}
+function resetVMatch(){Object.keys(vAns).forEach(n=>{const s=document.getElementById('vm'+n);s.value='';s.style.borderColor='';s.style.background='';});document.getElementById('vmatchfb').className='feedback';}
+
+/* Practice 2: gap fill */
+const gaps=[
+  {t:"My parents are very ____; they always encourage me.",a:['supportive']},
+  {t:"You can trust my sister — she is really ____.",a:['reliable']},
+  {t:"There is a strong ____ between me and my brother.",a:['bond']},
+  {t:"My grandparents are from an older ____.",a:['generation']},
+  {t:"There are five people in our ____.",a:['household']},
+  {t:"My sister is getting ____ next year.",a:['married']},
+  {t:"In the sale you can ____ ten pounds.",a:['save']},
+  {t:"I'd like to ____ a table for six people.",a:['book']}
+];
+const gf=document.getElementById('gapFill');
+gaps.forEach((g,i)=>{
+  const parts=g.t.split('____');
+  const d=document.createElement('div'); d.className='q';
+  d.innerHTML='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+parts[0]
+    +'<input class="gap" id="gap'+i+'" placeholder="word" style="width:130px">'+parts[1]+'</div>';
+  gf.appendChild(d);
+});
+function checkGapFill(){let s=0; gaps.forEach((g,i)=>{ if(gradeGap(document.getElementById('gap'+i),g.a)) s++; });
+  showResult('gapfb',s,gaps.length,'Answers: close, usually, save, book, married, collocation.','vocab');}
+function resetGapFill(){gaps.forEach((g,i)=>{const e=document.getElementById('gap'+i);e.value='';e.classList.remove('correct','wrong');});document.getElementById('gapfb').className='feedback';}
+
+/* Practice 3: choose correct word */
+const choose=[
+  {t:"She has no brothers or sisters — she is an ____.",opts:['only child','extended family','colleague'],a:'only child'},
+  {t:"My parents, my brother and I are my ____.",opts:['immediate family','good fortune','private room'],a:'immediate family'},
+  {t:"I really ____ my older brother; he is my role model.",opts:['look up to','book','save'],a:'look up to'},
+  {t:"We had a big ____ for my father's 50th birthday.",opts:['celebration','colleague','sale'],a:'celebration'},
+  {t:"My brother and I ____ really well; we never argue.",opts:['get on','take off','bring up'],a:'get on'}
+];
+const cw=document.getElementById('chooseWord');
+choose.forEach((c,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let opts='<option value="">choose</option>'+c.opts.map(o=>'<option value="'+o+'">'+o+'</option>').join('');
+  d.innerHTML='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+c.t.replace('____','<select class="gap" id="cw'+i+'">'+opts+'</select>')+'</div>';
+  cw.appendChild(d);
+});
+function checkChoose(){let s=0; choose.forEach((c,i)=>{const sel=document.getElementById('cw'+i);
+   sel.classList.remove('correct','wrong');
+   if(sel.value===c.a){s++;sel.classList.add('correct');}else{sel.classList.add('wrong');}});
+   showResult('choosefb',s,choose.length,'Remember: he/she + verb + s (watches, plays). "Rarely" = not often.','vocab');}
+function resetChoose(){choose.forEach((c,i)=>{const s=document.getElementById('cw'+i);s.value='';s.classList.remove('correct','wrong');});document.getElementById('choosefb').className='feedback';}
+
+/* Practice 4: sentence completion (linking) */
+const sent=[
+  {t:"I like my brother ____ he is very funny.",opts:['because','but','so'],a:'because'},
+  {t:"We have a large family, ____ we don't see each other often.",opts:['but','because','and'],a:'but'},
+  {t:"My grandparents live far away, ____ I call them every week.",opts:['so','but','because'],a:'so'},
+  {t:"I have one sister ____ two brothers.",opts:['and','so','but'],a:'and'}
+];
+const sc=document.getElementById('sentComp');
+sent.forEach((c,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let opts='<option value="">choose</option>'+c.opts.map(o=>'<option value="'+o+'">'+o+'</option>').join('');
+  d.innerHTML='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+c.t.replace('____','<select class="gap" id="sc'+i+'">'+opts+'</select>')+'</div>';
+  sc.appendChild(d);
+});
+function checkSent(){let s=0; sent.forEach((c,i)=>{const sel=document.getElementById('sc'+i);
+   sel.classList.remove('correct','wrong');
+   if(sel.value===c.a){s++;sel.classList.add('correct');}else{sel.classList.add('wrong');}});
+   showResult('sentfb',s,sent.length,'because = reason · but = contrast · so = result · and = adding.','vocab');}
+function resetSent(){sent.forEach((c,i)=>{const s=document.getElementById('sc'+i);s.value='';s.classList.remove('correct','wrong');});document.getElementById('sentfb').className='feedback';}
+
+/* ============ PRACTICE 5: match with Vietnamese ============ */
+const viLeft=[{n:1,t:'colleagues'},{n:2,t:'only child'},{n:3,t:'get married'},{n:4,t:'good fortune'},{n:5,t:'generation'},{n:6,t:'reliable'}];
+const viRight=[['a','con một'],['b','đồng nghiệp'],['c','đáng tin cậy'],['d','kết hôn'],['e','sự may mắn'],['f','thế hệ']];
+const viAns={1:'b',2:'a',3:'d',4:'e',5:'f',6:'c'};
+const vim=document.getElementById('viMatch');
+viLeft.forEach(item=>{
+  const d=document.createElement('div'); d.className='match-item';
+  let opts='<option value="">?</option>'+viRight.map(r=>'<option value="'+r[0]+'">'+r[0]+'</option>').join('');
+  d.innerHTML='<select id="vim'+item.n+'">'+opts+'</select><b>'+item.n+'.</b> '+item.t;
+  vim.appendChild(d);
+});
+const vileg=document.createElement('div'); vileg.className='tile soft-blue'; vileg.style.gridColumn='1/-1';
+vileg.innerHTML='<b>🇻🇳 Meanings:</b> '+viRight.map(r=>'<b>'+r[0]+'</b> = '+r[1]).join(' &nbsp;·&nbsp; ');
+vim.appendChild(vileg);
+function checkViMatch(){let s=0;
+  Object.keys(viAns).forEach(n=>{const sel=document.getElementById('vim'+n);
+    if(sel.value===viAns[n]){s++;sel.style.borderColor='var(--green)';sel.style.background='var(--green-soft)';}
+    else{sel.style.borderColor='var(--red)';sel.style.background='var(--red-soft)';}});
+  showResult('vimatchfb',s,6,'1-b, 2-a, 3-d, 4-e, 5-f, 6-c.','vocab');}
+function resetViMatch(){Object.keys(viAns).forEach(n=>{const s=document.getElementById('vim'+n);s.value='';s.style.borderColor='';s.style.background='';});document.getElementById('vimatchfb').className='feedback';}
+
+/* ============ PRACTICE 6: match collocations ============ */
+const clLeft=[{n:1,t:'a close-knit'},{n:2,t:'have a lot'},{n:3,t:'be there'},{n:4,t:'spend quality'},{n:5,t:'a strong family'},{n:6,t:'raise a'}];
+const clRight=[['a','in common'],['b','family'],['c','for someone'],['d','time together'],['e','family'],['f','bond']];
+const clAns={1:'b',2:'a',3:'c',4:'d',5:'f',6:'e'};
+const clm=document.getElementById('collMatch');
+clLeft.forEach(item=>{
+  const d=document.createElement('div'); d.className='match-item';
+  let opts='<option value="">?</option>'+clRight.map(r=>'<option value="'+r[0]+'">'+r[0]+'</option>').join('');
+  d.innerHTML='<select id="clm'+item.n+'">'+opts+'</select><b>'+item.n+'.</b> '+item.t+' …';
+  clm.appendChild(d);
+});
+const clleg=document.createElement('div'); clleg.className='tile soft-blue'; clleg.style.gridColumn='1/-1';
+clleg.innerHTML='<b>Endings:</b> '+clRight.map(r=>'<b>'+r[0]+'</b> = …'+r[1]).join(' &nbsp;·&nbsp; ');
+clm.appendChild(clleg);
+function checkCollMatch(){let s=0;
+  Object.keys(clAns).forEach(n=>{const sel=document.getElementById('clm'+n);
+    if(sel.value===clAns[n]){s++;sel.style.borderColor='var(--green)';sel.style.background='var(--green-soft)';}
+    else{sel.style.borderColor='var(--red)';sel.style.background='var(--red-soft)';}});
+  showResult('collmatchfb',s,6,'a close-knit family · have a lot in common · be there for someone · spend quality time together · a strong family bond · raise a family.','vocab');}
+function resetCollMatch(){Object.keys(clAns).forEach(n=>{const s=document.getElementById('clm'+n);s.value='';s.style.borderColor='';s.style.background='';});document.getElementById('collmatchfb').className='feedback';}
+
+/* ============ SHARED DRAG & DROP ENGINE ============ */
+let dragSource=null, tapSelected=null;
+function makeDraggable(el){
+  el.draggable=true;
+  el.addEventListener('dragstart',e=>{dragSource=el; el.classList.add('dragging'); e.dataTransfer.setData('text/plain',el.textContent);});
+  el.addEventListener('dragend',()=>{el.classList.remove('dragging');});
+  el.addEventListener('click',()=>{ // tap-to-select for touch
+    if(tapSelected===el){el.style.outline=''; tapSelected=null;}
+    else{ if(tapSelected) tapSelected.style.outline=''; tapSelected=el; el.style.outline='3px solid var(--pink)'; }
+  });
+}
+function makeDropZone(zone,onDrop){
+  zone.addEventListener('dragover',e=>{e.preventDefault(); zone.classList.add('over');});
+  zone.addEventListener('dragleave',()=>zone.classList.remove('over'));
+  zone.addEventListener('drop',e=>{e.preventDefault(); zone.classList.remove('over'); if(dragSource) onDrop(dragSource,zone);});
+  zone.addEventListener('click',()=>{ if(tapSelected){ onDrop(tapSelected,zone); tapSelected.style.outline=''; tapSelected=null; } });
+}
+
+/* ============ PRACTICE 7: drag & drop into sentences ============ */
+const ddData=[
+  {before:"My grandparents helped to ",word:"bring up",after:" my mother."},
+  {before:"I ",word:"take after",after:" my dad; we look the same."},
+  {before:"There are three ",word:"generations",after:" in my house."},
+  {before:"My parents are always ",word:"supportive",after:" of my studies."},
+  {before:"We ",word:"get on well with",after:" all our neighbours."}
+];
+function buildDD(){
+  const pool=document.getElementById('ddPool'), targets=document.getElementById('ddTargets');
+  pool.innerHTML=''; targets.innerHTML=''; document.getElementById('ddfb').className='feedback';
+  const words=ddData.map(d=>d.word).slice().sort(()=>Math.random()-0.5);
+  words.forEach(w=>{const s=document.createElement('span'); s.className='dd-item'; s.textContent=w; makeDraggable(s); pool.appendChild(s);});
+  ddData.forEach((d,i)=>{
+    const z=document.createElement('div'); z.className='dd-zone';
+    z.innerHTML='<span class="prompt"><b>'+(i+1)+'.</b> '+d.before+'</span>';
+    const drop=document.createElement('div'); drop.className='dd-drop'; drop.dataset.answer=d.word; drop.dataset.idx=i;
+    makeDropZone(drop,(src,zone)=>{ if(zone.dataset.filled){ document.getElementById('ddPool').appendChild(document.getElementById(zone.dataset.filled)); }
+      const id='ddi'+Math.random().toString(36).slice(2); src.id=id; src.classList.add('placed'); zone.dataset.filled=id; zone.innerHTML=''; zone.appendChild(src);
+      zone.classList.remove('correct','wrong'); });
+    z.appendChild(drop);
+    const aft=document.createElement('span'); aft.className='prompt'; aft.style.flex='0'; aft.textContent=d.after;
+    z.appendChild(aft);
+    targets.appendChild(z);
+  });
+}
+function checkDD(){
+  let s=0; const zones=document.querySelectorAll('#ddTargets .dd-drop');
+  zones.forEach(z=>{ const placed=z.textContent.trim();
+    if(placed===z.dataset.answer){s++; z.classList.add('correct'); z.classList.remove('wrong');}
+    else{z.classList.add('wrong'); z.classList.remove('correct');}});
+  showResult('ddfb',s,ddData.length,'Answers: bring up · take after · generations · supportive · get on well with.','vocab');
+}
+buildDD();
+
+/* ============ PRACTICE 8: categorization (drag) ============ */
+const catData=[
+  {w:'sibling',cat:'People'},{w:'relatives',cat:'People'},{w:'colleagues',cat:'People'},{w:'only child',cat:'People'},
+  {w:'take after',cat:'Actions & feelings'},{w:'look up to',cat:'Actions & feelings'},{w:'get married',cat:'Actions & feelings'},{w:'bond',cat:'Actions & feelings'},
+  {w:'a celebration',cat:'Events & shopping'},{w:'a sale',cat:'Events & shopping'},{w:'gift wrapping',cat:'Events & shopping'},{w:'total cost',cat:'Events & shopping'}
+];
+const catNames=['People','Actions & feelings','Events & shopping'];
+function buildCat(){
+  const pool=document.getElementById('catPool'), cols=document.getElementById('catCols');
+  pool.innerHTML=''; cols.innerHTML=''; document.getElementById('catfb').className='feedback';
+  catData.map(c=>c.w).slice().sort(()=>Math.random()-0.5).forEach(w=>{
+    const s=document.createElement('span'); s.className='dd-item'; s.textContent=w; makeDraggable(s); pool.appendChild(s);});
+  catNames.forEach(name=>{
+    const box=document.createElement('div'); box.className='cat-box';
+    box.innerHTML='<h4>'+ (name==='People'?'👪 ':name==='Actions & feelings'?'💬 ':'🎉 ') +name+'</h4>';
+    const drop=document.createElement('div'); drop.className='cat-drop'; drop.dataset.cat=name;
+    makeDropZone(drop,(src,zone)=>{ src.classList.add('placed'); zone.appendChild(src); });
+    box.appendChild(drop); cols.appendChild(box);
+  });
+}
+function checkCat(){
+  let s=0;
+  document.querySelectorAll('.cat-drop').forEach(zone=>{
+    const cat=zone.dataset.cat;
+    zone.querySelectorAll('.dd-item').forEach(it=>{
+      const correct=catData.find(c=>c.w===it.textContent).cat===cat;
+      it.style.borderColor=correct?'var(--green)':'var(--red)';
+      it.style.background=correct?'var(--green-soft)':'var(--red-soft)';
+      if(correct) s++;
+    });
+  });
+  showResult('catfb',s,catData.length,'People: sibling, relatives, colleagues, only child. Actions & feelings: take after, look up to, get married, bond. Events & shopping: a celebration, a sale, gift wrapping, total cost.','vocab');
+}
+buildCat();
+
+/* ============ PRACTICE 9: MCQ ============ */
+const vmcq=[
+  {q:'Which word means "a brother or a sister"?',opts:[['A','sibling'],['B','colleague'],['C','household']],a:'A'},
+  {q:'"My immediate family" means …',opts:[['A','my aunts and cousins'],['B','my parents, brothers and sisters'],['C','my work friends']],a:'B'},
+  {q:'If you "look up to" someone, you …',opts:[['A','admire and respect them'],['B','argue with them'],['C','forget them']],a:'A'},
+  {q:'A "close-knit family" is a family that is …',opts:[['A','very large'],['B','very close and supportive'],['C','never at home']],a:'B'},
+  {q:'"Good fortune" means …',opts:[['A','good luck'],['B','a lot of food'],['C','a big house']],a:'A'},
+  {q:'A "reliable" person is someone you can …',opts:[['A','trust'],['B','ignore'],['C','sell']],a:'A'},
+  {q:'"We are a typical family" means our family is …',opts:[['A','strange and unusual'],['B','normal and ordinary'],['C','very famous']],a:'B'},
+  {q:'To reserve a table at a restaurant, you …',opts:[['A','book a table'],['B','save a table'],['C','wrap a table']],a:'A'}
+];
+const vmc=document.getElementById('vMcq');
+vmcq.forEach((m,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let html='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+m.q+'</div>';
+  m.opts.forEach(o=>{html+='<label class="opt vmc'+i+'" data-v="'+o[0]+'"><input type="radio" name="vmc'+i+'" value="'+o[0]+'">'+o[0]+' · '+o[1]+'</label>';});
+  d.innerHTML=html; vmc.appendChild(d);
+});
+function checkVMcq(){
+  let s=0;
+  vmcq.forEach((m,i)=>{
+    document.querySelectorAll('.vmc'+i).forEach(l=>l.classList.remove('correct','wrong'));
+    const cl=document.querySelector('.vmc'+i+'[data-v="'+m.a+'"]'); if(cl) cl.classList.add('correct');
+    const sel=document.querySelector('input[name="vmc'+i+'"]:checked');
+    if(sel){ if(sel.value===m.a) s++; else{const wl=document.querySelector('.vmc'+i+'[data-v="'+sel.value+'"]'); if(wl) wl.classList.add('wrong');} }
+  });
+  showResult('vmcqfb',s,vmcq.length,'Review any red answers — the green one is correct.','vocab');
+}
+function resetVMcq(){vmcq.forEach((m,i)=>{document.querySelectorAll('input[name="vmc'+i+'"]').forEach(x=>x.checked=false);document.querySelectorAll('.vmc'+i).forEach(l=>l.classList.remove('correct','wrong'));});document.getElementById('vmcqfb').className='feedback';}
+
+/* ============ PRACTICE 10: error correction ============ */
+const errData=[
+  {t:"My brother and I get on good with each other.",wrong:'good',a:['well'],hint:'get on ___ with'},
+  {t:"I take from my mother — we look the same.",wrong:'from',a:['after'],hint:'take ___'},
+  {t:"They are going to rise a family in the countryside.",wrong:'rise',a:['raise'],hint:'___ a family'},
+  {t:"We spend quality time altogether every weekend.",wrong:'altogether',a:['together'],hint:'spend quality time ___'},
+  {t:"My parents are very support of my dreams.",wrong:'support',a:['supportive'],hint:'adjective'}
+];
+const ec=document.getElementById('errCorr');
+errData.forEach((e,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  const shown=e.t.replace(e.wrong,'<b style="color:var(--red);text-decoration:line-through">'+e.wrong+'</b>');
+  d.innerHTML='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+shown+'</div>'
+    +'<div>Correct word: <input class="gap" id="ec'+i+'" placeholder="type here" style="width:160px"> <span style="color:var(--muted);font-size:.82rem">('+e.hint+')</span></div>';
+  ec.appendChild(d);
+});
+function checkErr(){let s=0; errData.forEach((e,i)=>{ if(gradeGap(document.getElementById('ec'+i),e.a)) s++; });
+  showResult('errfb',s,errData.length,'Answers: well · after · raise · together · supportive.','vocab');}
+function resetErr(){errData.forEach((e,i)=>{const el=document.getElementById('ec'+i);el.value='';el.classList.remove('correct','wrong');});document.getElementById('errfb').className='feedback';}
+
+/* ============ PRACTICE 11: vocabulary in context ============ */
+document.getElementById('ctxText').innerHTML='<p>"I come from a <b>close-knit</b> family. My parents <b>brought</b> my sister and me <b>up</b> in a small town. We have a strong <b>bond</b> and we always <b>spend quality time together</b> at the weekend. I really <b>look up to</b> my mother because she is so <b>reliable</b> — she never lets anyone down."</p>';
+const ctxData=[
+  {q:'Here, "close-knit" means the family is …',opts:[['A','very close and united'],['B','very rich'],['C','very large']],a:'A'},
+  {q:'"brought … up" means the parents …',opts:[['A','carried them upstairs'],['B','raised and cared for them'],['C','woke them up early']],a:'B'},
+  {q:'A strong "bond" is a strong …',opts:[['A','argument'],['B','connection'],['C','building']],a:'B'},
+  {q:'"reliable" here means the mother …',opts:[['A','can be trusted'],['B','is often late'],['C','is very tall']],a:'A'}
+];
+const ctxc=document.getElementById('ctxQ');
+ctxData.forEach((m,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let html='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+m.q+'</div>';
+  m.opts.forEach(o=>{html+='<label class="opt ctx'+i+'" data-v="'+o[0]+'"><input type="radio" name="ctx'+i+'" value="'+o[0]+'">'+o[0]+' · '+o[1]+'</label>';});
+  d.innerHTML=html; ctxc.appendChild(d);
+});
+function checkCtx(){
+  let s=0;
+  ctxData.forEach((m,i)=>{
+    document.querySelectorAll('.ctx'+i).forEach(l=>l.classList.remove('correct','wrong'));
+    const cl=document.querySelector('.ctx'+i+'[data-v="'+m.a+'"]'); if(cl) cl.classList.add('correct');
+    const sel=document.querySelector('input[name="ctx'+i+'"]:checked');
+    if(sel){ if(sel.value===m.a) s++; else{const wl=document.querySelector('.ctx'+i+'[data-v="'+sel.value+'"]'); if(wl) wl.classList.add('wrong');} }
+  });
+  showResult('ctxfb',s,ctxData.length,'Use the whole sentence to guess the meaning — a key IELTS skill!','vocab');
+}
+function resetCtx(){ctxData.forEach((m,i)=>{document.querySelectorAll('input[name="ctx'+i+'"]').forEach(x=>x.checked=false);document.querySelectorAll('.ctx'+i).forEach(l=>l.classList.remove('correct','wrong'));});document.getElementById('ctxfb').className='feedback';}
+
+/* ============ PRACTICE 12: listen & identify ============ */
+const listenData=[
+  {a:'extended family',opts:['extended family','immediate family','only child']},
+  {a:'household',opts:['household','hometown','husband']},
+  {a:'colleagues',opts:['colleagues','cousins','collocation']},
+  {a:'good fortune',opts:['good fortune','gift wrapping','great future']},
+  {a:'reliable',opts:['reliable','relatives','religious']}
+];
+const li=document.getElementById('listenId');
+listenData.forEach((m,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let html='<div class="qtext"><span class="qnum">'+(i+1)+'</span><button class="btn blue small" onclick="speak(\''+m.a+'\',0.85)">▶ Play word</button></div>';
+  m.opts.slice().forEach(o=>{html+='<label class="opt li'+i+'" data-v="'+o+'"><input type="radio" name="li'+i+'" value="'+o+'">'+o+'</label>';});
+  d.innerHTML=html; li.appendChild(d);
+});
+function checkListenId(){
+  let s=0;
+  listenData.forEach((m,i)=>{
+    document.querySelectorAll('.li'+i).forEach(l=>l.classList.remove('correct','wrong'));
+    const cl=document.querySelector('.li'+i+'[data-v="'+m.a+'"]'); if(cl) cl.classList.add('correct');
+    const sel=document.querySelector('input[name="li'+i+'"]:checked');
+    if(sel){ if(sel.value===m.a) s++; else{const wl=document.querySelector('.li'+i+'[data-v="'+sel.value+'"]'); if(wl) wl.classList.add('wrong');} }
+  });
+  showResult('listenIdfb',s,listenData.length,'Listen for similar-sounding words (distractors) — press ▶ again to check.','vocab');
+}
+function resetListenId(){listenData.forEach((m,i)=>{document.querySelectorAll('input[name="li'+i+'"]').forEach(x=>x.checked=false);document.querySelectorAll('.li'+i).forEach(l=>l.classList.remove('correct','wrong'));});document.getElementById('listenIdfb').className='feedback';}
+
+/* ============ PRACTICE 13: speaking with target vocab ============ */
+const speakData=[
+  {prompt:'Describe your family. (Try to use these words.)',words:['immediate family','a close family','household','sibling']},
+  {prompt:'Talk about someone you admire in your family.',words:['look up to','supportive','reliable','take after']},
+  {prompt:'Talk about what your family does together.',words:['spend quality time together','get on well with','have a lot in common','a strong family bond']}
+];
+const sp=document.getElementById('speakPrompts');
+speakData.forEach((p,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let html='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+p.prompt
+    +' <button class="speak" onclick="speak(\''+p.prompt.replace(/[()']/g,'')+'\')">🔊</button></div><div class="checklist">';
+  p.words.forEach((w,j)=>{html+='<label style="display:inline-flex;margin-right:8px"><input type="checkbox" class="spk'+i+'">I used "<b>'+w+'</b>" <button class="speak" onclick="speak(\''+w+'\')" style="width:26px;height:26px;font-size:.8rem">🔊</button></label>';});
+  html+='</div>';
+  d.innerHTML=html; sp.appendChild(d);
+});
+function scoreSpeakVocab(){
+  const total=document.querySelectorAll('[class^="spk"],[class*=" spk"]').length || document.querySelectorAll('input[class*="spk"]').length;
+  const all=document.querySelectorAll('input[class*="spk"]');
+  const n=[...all].filter(x=>x.checked).length;
+  const fb=document.getElementById('speakVocabfb');
+  fb.className='feedback show '+(n>=8?'good':'mid');
+  fb.innerHTML='<span class="score-chip">'+n+'/'+all.length+' words used</span> '+(n>=8?'Fantastic — you used lots of target vocabulary! 🎉':'Good — try to use a few more target words next time. 💪');
+  markDone('vocab');
+}
+function resetSpeakVocab(){document.querySelectorAll('input[class*="spk"]').forEach(x=>x.checked=false);document.getElementById('speakVocabfb').className='feedback';}
+
+/* ============ REVIEW: mini quiz (Track 08 — Korean 'Dol' celebration) ============ */
+document.getElementById('t3').innerHTML=
+ '<div class="line"><b>Mark:</b> Hi there, Nam! You aren\'t still working on your history assignment, are you?</div>'
+ +'<div class="line"><b>Nam:</b> Hi, Victor! No, I\'m taking a break. I\'m looking at some photos – a family celebration.</div>'
+ +'<div class="line"><b>Mark:</b> So, who\'s the cute baby?</div>'
+ +'<div class="line"><b>Nam:</b> She\'s my niece, Tae-Hee. She\'s one year old. It\'s a very important birthday in Korea – we call it \'Dol\'. I think it\'s more important than a wedding or a graduation!</div>'
+ +'<div class="line"><b>Mark:</b> I like the <u>red and silver hat</u> Tae-Hee\'s wearing. Baby boys wear a different one – all black.</div>'
+ +'<div class="line"><b>Nam:</b> That\'s a little purse. It\'s made of silk and it means <u>good luck (good fortune)</u> in our culture.</div>'
+ +'<div class="line"><b>Nam:</b> We always eat <u>rice cakes</u> at a baby\'s party – usually 12 different types.</div>'
+ +'<div class="line"><b>Mark:</b> Shouldn\'t the baby get the presents?</div>'
+ +'<div class="line"><b>Nam:</b> Well, the baby receives <u>money</u> from the guests, so in a way you\'re right!</div>';
+
+const miniData=[
+ {q:'Who are the two speakers?',opts:[['A','good friends'],['B','work colleagues'],['C','family members']],a:'A'},
+ {q:'What celebration are they talking about?',opts:[['A','a birthday party'],['B','a graduation'],['C','a wedding']],a:'A'},
+ {q:'What colour hat do baby girls wear at the event in Korea?',opts:[['A','black and silver'],['B','black'],['C','red and silver']],a:'C'},
+ {q:'The purse represents …',opts:[['A','good health'],['B','good fortune'],['C','wealth']],a:'B'},
+ {q:'What food do guests have at the event?',opts:[['A','oranges'],['B','vegetables'],['C','rice cakes']],a:'C'},
+ {q:'What does the baby receive from the guests?',opts:[['A','a candle'],['B','some money'],['C','some tea']],a:'B'}
+];
+const mq=document.getElementById('miniQuiz');
+miniData.forEach((m,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  let html='<div class="qtext"><span class="qnum">'+(i+1)+'</span>'+m.q+'</div>';
+  m.opts.forEach(o=>{ html+='<label class="opt mini-mq'+i+'" data-v="'+o[0]+'"><input type="radio" name="mq'+i+'" value="'+o[0]+'">'+o[0]+' · '+o[1]+'</label>'; });
+  d.innerHTML=html; mq.appendChild(d);
+});
+function checkMini(){
+  let s=0;
+  miniData.forEach((m,i)=>{
+    document.querySelectorAll('.mini-mq'+i).forEach(l=>l.classList.remove('correct','wrong'));
+    const cl=document.querySelector('.mini-mq'+i+'[data-v="'+m.a+'"]'); if(cl) cl.classList.add('correct');
+    const sel=document.querySelector('input[name="mq'+i+'"]:checked');
+    if(sel){ if(sel.value===m.a) s++; else{const wl=document.querySelector('.mini-mq'+i+'[data-v="'+sel.value+'"]'); if(wl) wl.classList.add('wrong');} }
+  });
+  showResult('minifb',s,miniData.length,'Tip: the answers came in the same order as the conversation — a key IELTS strategy!','review');
+}
+function resetMini(){miniData.forEach((m,i)=>{document.querySelectorAll('input[name="mq'+i+'"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('.mini-mq'+i).forEach(l=>l.classList.remove('correct','wrong'));});document.getElementById('minifb').className='feedback';}
+
+/* final 1-min timer */
+let ftInt=null;
+function miniTimer(){
+  clearInterval(ftInt); let t=60; const el=document.getElementById('finalTimer'); el.textContent='1:00';
+  ftInt=setInterval(()=>{t--; el.textContent=fmt(t); if(t<=0){clearInterval(ftInt); el.textContent='⏹ Time!';}},1000);
+}
+function finishLesson(){
+  markDone('review');
+  const fb=document.getElementById('finishfb');
+  fb.className='feedback show good';
+  fb.innerHTML='🎉 <b>Well done, you finished Unit 1!</b> You practised listening for details, answering IELTS questions, and speaking about family. Keep using your new words — see you in Unit 2!';
+}
+</script>
+</body>
+</html>
